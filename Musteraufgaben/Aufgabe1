@@ -1,0 +1,41 @@
+/*Aufgabe:
+Schreiben Sie ein Java-Programm, 
+das zwei überTastatur eingegebene Zahlen der Größe 
+nach sortiert auf dem Bildschirm ausgibt.
+*/
+package übungsaufage1.pkgif;
+
+import java.util.Scanner;
+
+public class Übungsaufage1 {
+    public static void main(String[] args) {
+
+    //setzen der Variablen
+    float zahl1;
+    float zahl2;
+    float größerezahl;
+    float kleinerezahl;
+    
+    //Eingabe
+    Scanner input = new Scanner(System.in);
+    System.out.println("Bitte geben sie die erste Zahl ein:");
+    zahl1 = input.nextFloat();
+        
+    System.out.println("Bitte geben sie die zweite Zahl ein:");
+    zahl2 = input.nextFloat();
+    
+    //Verarbeitung
+    if(zahl1 < zahl2){
+        größerezahl = zahl2;
+        kleinerezahl = zahl1;
+    }else
+    {
+        größerezahl =zahl1;
+        kleinerezahl = zahl2;
+    }
+        
+    //Ausgabe
+    System.out.println("Die größere Zahl ist: "+größerezahl);
+        System.out.println("Die Kleinere Zahl ist: "+ kleinerezahl);
+    }
+}
