@@ -1,0 +1,47 @@
+/*
+) Schreiben Sie Java -Programm, das den Mittelwert zweier Noten 
+(z.B. in Mathematik)  berechnet:Sie geben über Tastatur zwei  reelle Zahlen ein.
+Wenn eine der Zahlen keine Note ist, (also die Zahl kleiner als 1 
+oder größer als 6 ist), soll das Programm beendet werden und 
+die Meldung „Eingegebene Zahl ist keine Note“ auf dem Bildschirm 
+ausgegeben werden.bWenn alle zwei Zahlen Noten sind, 
+(also die Zahlen größer gleich eins und kleiner gleich sechs sind), 
+soll die Meldung „Der Mittelwert ihrer Noten ist:“ und der Mittelwert
+der Noten auf dem Bildschirm ausgegeben werden.
+*/
+package übungsaufgabe2.pkgif;
+
+import java.util.Scanner;
+
+public class Übungsaufgabe2 {
+    public static void main(String[] args) {
+
+    float note1;
+    float note2;
+    float mittelwert = 0;
+    
+    Scanner input = new Scanner(System.in);
+    
+    //Eingabe  
+    System.out.println("Bitte geben sie die erste Note ein:");
+    note1 = input.nextFloat();
+    
+    System.out.println("Bitte geben sie die zweite Note ein:");
+    note2 = input.nextFloat();
+    
+    //Verarbeitung/Ausgabe
+    if(note1 < 1 || note2 < 1 || note1 > 6 || note2 >6){
+        
+        System.out.println("Eingegebene Zahl ist keine Note");
+    }else{
+        
+        mittelwert = (note1 + note2)/2;
+        System.out.println("Der Mittelwert ist: "+ mittelwert);
+    }
+    
+        
+  }
+    
+}
+    
+
