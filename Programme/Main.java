@@ -13,9 +13,9 @@ public class Main {
     public static void main(String[] args) {
 	    //Init
         Scanner input = new Scanner(System.in);
-        boolean drunkmode = false;
+        boolean drunkmode = false; // Hatten wir noch nicht
         String inpString = "";
-        boolean login = false;
+        boolean login = false;// Hatten wir noch nicht wäre für wahr = 1 und Falsch = 0
         int emptycounter = 0;
 
         //Sysinfo
