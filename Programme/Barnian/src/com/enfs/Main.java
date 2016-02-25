@@ -17,6 +17,7 @@ public class Main {
         String inpString = "";
         boolean login = false;// Hatten wir noch nicht wäre für wahr = 1 und Falsch = 0
         int emptycounter = 0;
+        String username = "";
 
         //Sysinfo
         String barnian = "Barnian 1.0";
@@ -41,18 +42,19 @@ public class Main {
                     String name = input.nextLine();
                     System.out.println("Passwort: ");
                     String pw = input.nextLine();
-                    if (name.equals("barner") && pw.equals("bier")) {
+                    if (name.equals("barner") && pw.equals("bier") || name.equals("lowski") && pw.equals("keinstress") || name.equals("samed") && pw.equals("hygienefreak")) {
                         correct = true;
                         login = true;
                         System.out.println("Anmeldung erfolgreich!");
+                        username = name;
                     } else {
                         System.out.println("Anmeldung fehlgeschlagen.\nBitte rasieren Sie einen Affen und probieren es erneut.\n");
                     }
-                } while(correct != true);
+                } while(!correct);
             } //end login
 
             //Main screen
-            System.out.println("barner@Barnian ~ $ ");
+            System.out.println(username + "@Barnian ~ $ ");
             inpString = input.nextLine();
 
 
@@ -157,10 +159,37 @@ public class Main {
                 }
             }
 
+            if (inpString.equals("exit") || inpString.equals("logout") || inpString.equals("bye")) {
+                login = false;
+            }
+
+            if (inpString.equals("samedcleaner")) {
+                //Viren sind für mich tabu!
+                System.out.println("Hier wird geputzt. Aber anständig!");
+            }
+
+
             //Empty Inputstring
             if (inpString.isEmpty()) {
                 if (drunkmode) {
-                    System.out.println("Was soll deeees?");
+                    int zufall = 10;
+                    zufall = (int) (Math.random() * 5);
+                    //Zufalls Spruch leere eingabe Drunkmode
+                    if (zufall == 1) {
+                        System.out.println("Was soll deeees?");
+                    }
+                    if (zufall == 2) {
+                        System.out.println("Ohne Ausgabe nur ein Briefbeschwähereeeeeer");
+                    }
+                    if (zufall == 3) {
+                        System.out.println("ruhe sonst v3");
+                    }
+                    if (zufall == 4) {
+                        System.out.println("Da hat wohl jemand in der Apotheke Gefrühstückt");
+                    }
+                    if (zufall == 0) {
+                        System.out.println("Was machen sie da dddeeeessss sieht nicht nach Java aus");
+                    }
                 } else {
                     if (emptycounter > 2) {
                         System.out.println("Gleich gibt's V3");
