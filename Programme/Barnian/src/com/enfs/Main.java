@@ -23,12 +23,76 @@ public class Main {
         String barnian = "Barnian 1.0";
 
 
-        
+
 
         //Start
 
         //bootup
         System.out.println("Booting....");
+
+       for (double x = 1; x <= 100; x = x + 1)
+        {
+            System.out.println("+++?Z~::::::::::::::::::::::::::::::::~~==~~::::::::::::::::::::::::::,,:,,::::M");
+            System.out.println("?++?Z~~~~~::,,,::::::::~~~~~~~~~~~~?ZOOOOO8OOZZ$I~+7OO::::::::,,::::::,:,,,,,,,M");
+            System.out.println("+++?$::::~~~~~~~~~~:::=I~::::=?$ZZZOOOOO888888DD888O8Z::,::::,,,,,,,,,,,,,,,,,,M");
+            System.out.println("+++?++++====~:::::~~~~+IIZOZZZ$ZOOO8D8DD88NN8888DD8D8D::::,,,,,,,,,,,,,,,,,,,,,M");
+            System.out.println("+++?+==+=====~:~~===~7O888OOZZOZOOOOO8ODD8O8NNN8DDDD888OI:::,,,,,,,,,,,,,,,,,,,M");
+            System.out.println("+++?++=+=====:,,,,:$88888888OZOO8OO8DD888NNND8DDDDDDDDDDD$+::::::::,,,.,.,.,.,,M");
+            System.out.println("+++?++===+===:,,,=O888OOOOOOOOOOZ88O88ODNDD88NDDDDDDDDDDDD88=:,,,,,,,::,:,,,,,.M");
+            System.out.println("+++?+===+==++=7ZOOOOOO8888OZO8OZ8OZOODODD888DD8DDD8DDDDDNND8$+=~~~~:::,,,,,,,,,M");
+            System.out.println("+++?+==+===++?$88888OO88DDD888ZOZZZOOZO8DDDD8DDDD8888888DND88Z+~~~======~~~=?=~M");
+            System.out.println("==+?++======7ZDD88D88D888OZ$$$Z$$$$$$$ZO888D888888888888888N88Z=,,,::~~::~==?==M");
+            System.out.println("==+?=+====++7ONND8DDD8Z7I??++??I?I?II7ZOO8O8O8D8888888888O8D888O=,,,,,,,,,,,:~~M");
+            System.out.println("==+?======+?I8NNNND8ZI?++========+++?7$ZZ8OOO888O88OOOO88O88DO8O+,,,,,,,,,,,,,,M");
+            System.out.println("==+?======+I?$DDNMNI?+====~~~~~~~~~=II7ZZOZZOOO8O8OO8OO8OOOO8OOO$++=~:::::,,,,,M");
+            System.out.println("==+?:,:,,,,=+7ODNMI++====~~~~~~~~~~?+?7ZOOZZOZOOOOZOOO8ZOOOZ8OOZ$???????++?++=~M");
+            System.out.println("==+?:,,,,,,::+Z8D$+=====~~~~~~~~~~~~~=IZ$ZZZOOOOOOOOOZOOZOZOO8OZI?+??++???+????M");
+            System.out.println("===?:,.,,,,,,:Z8D++=====~=~~" + x + "%~~~~~~+7$ZZ$ZOZOOOZOOZZOOOOOO88Z$++?++++???????M");
+            System.out.println("7I+?,.,,,,,,,:7OZ+=====~~~~~~~~~~~~~~~=I7$$$OZZZOZZOZOZOZOO8OOOZ7??+???+???????M");
+            System.out.println("$$??,,,.,.,,.,?O$+=====~~~~~~=~~~~~~~~~?I77$$ZZZOO$ZZZZZZZO8ZOOZ7???+??????????M");
+            System.out.println("?I+?:,.,,,,..,~O7+====~~=~~~~~~~~~~~~~~=?I?I7$$ZZZZZZZZZZZZ8OOZZI?+????????+???M");
+            System.out.println("$7+?,,,,,..,.,:I?==========~~~~~=~~~=~~~++++I7$$ZZZ$$Z77??=ZOOZ$?+?+???????????M");
+            System.out.println(":~=+,,,,,,,,,,,:+++++++??I77ZZ$$ZOZZ$$$ZZ$$$7$77I7777III+?Z+OOZI???????????????M");
+            System.out.println("::=+:,......,,,,=++?$ZO88OOZZ$ZZO7:?$Z8OOOO8ZZOOZZZZZ77I==?I?ZZI???????????????M");
+            System.out.println("=~++===========?I7ZZO888DDND8OOI,,,=O88O88O888888OOOOOOZZ$77II77???????????????M");
+            System.out.println("==++==========$ZZO88888OO8DDNN~,:DND8888DD8DDDDDDDDOOOOO$OZZZ$77?I7????????????M");
+            System.out.println("::++==========OO8DNNDDDDD888D?,7NNDDNDDNNNMMMMMMMMMMMMN88OOZZZZZ$77$7?::,::????M");
+            System.out.println("~:++==========I8NOZZZZOO88DDD,8NNNND888DDDDNNNNMMMMMMMNNND8ZZZZZZZ$$$$$7I=:????M");
+            System.out.println("==++==========7OZO88DDDDD88O,?DD8DDNNNDDD888DDDDNNNNNMMDDDNDD8OZZZZZ$Z$$77~????M");
+            System.out.println("~~~,:::~~~==Z$ZZO88DDDDDD::D8OOOOOOZO88888888DDND8ODDMNNNNNNDD8D8OOZZ$Z$77I+???M");
+            System.out.println(":::,..,.,,,:OOOO8888OD8ZZ::OOOZOOO8OOZOZZZO8OOO88DDOO8DNMNNNNDDD88OZ$$ZZ$77+???M");
+            System.out.println(":::,......,$ZZOZZZZZZOZZO~,ZOOZZZZOZOOOOOZZZZ$Z$ZOO888O8NNNMMNDDD8OOZZ$Z$77+~~~M");
+            System.out.println(":::,.....,+ZOZOOOOOOZOZZOO.=OOZZZZZZZZOOOOZZZZZZZZ$$$$ZOODMNNMNNDD88ZZ$$$$7I,,:M");
+            System.out.println(":::......,IOOOOOOOOZZZOOOO?,?OZZZZ$ZZZZZZZZOOZOZZZZZZZ$ZZ$7$8NNNND88ZZZ$$$77,,,M");
+            System.out.println("=~:...,.,,ZOOOOOZZZZOZOOOOOI,=ZZZ$$ZZZ$$ZZZOOOOOOOZOZOOOZ$$ZOOOOZO$D88Z$$$$I,,,M");
+            System.out.println("~~:....,,,ZZ$Z$ZZ$ZZZZOOOO8OO:,?$$$ZZ?7I$ZZZZZZOOOZOOOOO8O88OZZZZZZ$Z8OZ$$$I,,,M");
+            System.out.println("~=:,.,,,,,$ZZZZZZZZZOZOO8O88O8Z7:,:,,::=ZZZZZZZZZZ$$O88OOZZ$ZZZ$ZZZZZZZ7$77I,,,M");
+            System.out.println("==,,..,,,:::?ZZ:?ZOOOOZOO88OO8ZOO88+~=,:~$ZZZZZZOOO8OZZZ$ZZZZZZZZZ$$Z$ZZ$$7I,,,M");
+            System.out.println("==,,,,.,,:~~$Z:,,$ZOOOOOO88888ZZZOO888OZZZ$$ZZ8OZZZZ$$7$$$Z$ZZZZZ$$$$$$$$$777IIM");
+            System.out.println("==,,..,,,,~+Z::,:ZZOOOOOO8O888ZZZZ$ZZ$$$ZO8OOZZZZ$ZZZZ$$$$$$$$$$$Z$$$$$$7$$7777M");
+            System.out.println("=+,,,....,~?$::,+ZOOO7:::=OO8OZZZZZZ$ZZO8O$$$$ZZZZ7$$Z$$$$777777777Z$$$$$$$77$$M");
+            System.out.println("++,,.....?~Z~:,:ZOOOI:,,:::~Z8ZZZZOZZOOOZZZZ$Z$$ZZ$$$ZZZZO888888OOOZ$$$77$$$$$$M");
+            System.out.println("++,.....~:=I::,+ZOO:,:,~=:::~8ZZZZZZO8OZZ$ZZZ$Z$ZZOO8DDNND88OOOZZOZOOZZZZZ$$7$7M");
+            System.out.println("++,.....?~?::::OOO::::=OZ:::=8OOZZZO88ZZZ$ZZOOOO88NNN8ZZZZZZZ$$ZZZZ$$$Z$$$$$$$7M");
+            System.out.println("++,....7~~~::,?OO::::=7$O7:~8OOOZOO8OOZZZZZO88DNN8ZZZZZOZOZZZZ$$ZZ$$$$$$$$$$$$ZM");
+            System.out.println("==,..,$OOZ::::Z:~:::O~::~7OO8$:ZZZOOZZZZO8DNNNZZZZZZ$ZZZ$ZZZZZZZZOZZ$$$$$ZZZ$$$M");
+            System.out.println("+=?O8ZZOOI==:7Z,:::OO:::~+88~::ZOOOOZZ8DNMD$$$ZZZ$$$ZZZZZZZOZZZ$$$Z$ZZ$$Z7ZZ$$$M");
+            System.out.println("O88OZZOOO$?Z$I?:::=O::::IOO::~~OZ88ZODDNOZ$OOZZZ$$$$7ZZZZZZZZOZZZZ$ZZZ$$Z$$Z$$ZM");
+            System.out.println("8OOOOZOO8Z?ZZOO+::::::~OO~:::~$ZODZODNDZODNMNDD8O$ZZZ$Z$$7$$ZZZZ$ZZZ$7$Z$Z7$$$$M");
+            System.out.println("OOOOOZO88O+ZOOOOZ~:::~8+::::::~7888DNOO8ZZOOOOO88OZZZZZZZZZ$Z$$$$$$$$$$7Z$Z$$$$M");
+            System.out.println("OO8OOZOOO$=ZOOOOOO8O8$::::=O+~~O8D8DD$$ZZZ$ZZZZZZOOOOOZOZO8OZOOOOZZO$ZZ7$$$$$$$M");
+
+
+            for (int y = 0; y < 300; y++)
+            {
+                for (double xy = 0.0001; xy < 40; xy = xy + 0.0001)
+                {
+                   // System.out.print("");
+                }
+               // System.out.println();
+            }
+        }
+
         System.out.println("Setting up Java VM");
         System.out.println("That's it!");
         System.out.println("Nice and fast Barnian boot!\n\n\n");
