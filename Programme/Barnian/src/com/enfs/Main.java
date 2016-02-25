@@ -22,6 +22,9 @@ public class Main {
         //Sysinfo
         String barnian = "Barnian 1.0";
 
+
+        
+
         //Start
 
         //bootup
