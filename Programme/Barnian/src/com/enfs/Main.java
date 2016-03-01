@@ -18,6 +18,8 @@ package com.enfs;
  * - visio
  * - powerpoint
  * - raten (Minispiel)
+ * - help angepasst
+ * - langweilen bei Lowski
  * TODO: Befehlsliste aktualisieren
  */
 
@@ -235,12 +237,16 @@ public class Main {
                 System.out.println("Kein Flussdiagramm zu zeichnen ist genauso,\nwie nen Affen zu rasieren," +
                 " den mit Niveacreme einzucremen,\nin einen Anzug zu stecken und vor die Tastatur zu setzen.\n");
             }
-
+            //barner
             if (inpString.equals("help")) {
                 System.out.println("Kommandos:");
                 System.out.println("exit\ndrunk\nflussdiagramm\nbreakfast\nhostname\nv3\ninfo\nminus\nplus\nbier\neditor\n");
             }
-
+            //lowski
+            if (inpString.equals("help") && username.equals("lowski")) {
+                System.out.println("Kommandos:");
+                System.out.println("visio\nlangweilen\n");
+            }
             if (inpString.equals("bier") && drunkmode) {
                 for (int i = 0; i < 10; i++) {
                     System.out.println("Bieeeeeeer!");
@@ -301,7 +307,7 @@ public class Main {
             }
 
             if (inpString.equals("visio") && username.equals("lowski")) {
-                System.out.println("Visio ist auf diesem Barnian System leider nicht installiert.");
+                System.out.println("Visio ist auf diesem Barnian System leider noch nicht installiert.");
             }
 
             if (inpString.equals("powerpoint") || inpString.equals("barnipoint")) {
@@ -329,7 +335,22 @@ public class Main {
                 }
                 System.out.println("Benötigte Versuche: " + versuche);
             }
-
+            if (inpString.equals("langweilen") && username.equals("lowski")){
+                
+                String abfrage = "ja"; 
+                System.out.println("Langweilen sie sich?");
+                System.out.println("JA/NEIN");
+                abfrage = input.nextLine();
+                if(abfrage.equals("ja")) {
+                    System.out.println("Dann gehen sie zum Toom! Kaffee saufen!");
+                }
+                else{
+                    System.out.println("Dann passen sie auf!");
+                    }
+                   
+            }
+                              
+                
             //Empty Inputstring
             if (inpString.isEmpty()) {
                 if (drunkmode) {
