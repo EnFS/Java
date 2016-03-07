@@ -19,7 +19,7 @@ package com.enfs;
  * - powerpoint
  * - raten (Minispiel)
  * - help angepasst
- * - langweilen bei Lowski
+ * - langweilen bei Lowski mit logo
  * TODO: Befehlsliste aktualisieren
  */
 
@@ -341,9 +341,68 @@ public class Main {
                 System.out.println("Langweilen sie sich?");
                 System.out.println("JA/NEIN");
                 abfrage = input.nextLine();
+                int simon = 0;
                 if(abfrage.equals("ja")) {
+                    while(simon<=5){
                     System.out.println("Dann gehen sie zum Toom! Kaffee saufen!");
-                }
+                    System.out.println(" ___________________________________");
+                    System.out.println("|				    |");						
+                    System.out.println("|				    |");			
+                    System.out.println("|                                   |");		
+                    System.out.println("|___________|   	|___________|");			
+                    System.out.println("            |           |");	
+                    System.out.println("            |		|");	
+                    System.out.println("            |		|");
+                    System.out.println("            |		|");
+                    System.out.println("            |		|");
+                    System.out.println("            |		|");
+                    System.out.println("            |___________|");
+                    simon ++;
+                    }
+			
+                    System.out.println("	 ___________________");
+                    System.out.println("	|    ___________    |");
+                    System.out.println("	|   |           |   |");
+                    System.out.println("	|   |           |   |");
+                    System.out.println("	|   |           |   |");
+                    System.out.println("	|   |           |   |");
+                    System.out.println("	|   |           |   |");
+                    System.out.println("	|   |           |   |");
+                    System.out.println("	|   |           |   |");
+                    System.out.println("	|   |           |   |");
+                    System.out.println("	|   |___________|   |");
+                    System.out.println("	|___________________|");    
+
+                         System.out.println("	 ___________________");
+                    System.out.println("	|    ___________    |");
+                    System.out.println("	|   |           |   |");
+                    System.out.println("	|   |           |   |");
+                    System.out.println("	|   |           |   |");
+                    System.out.println("	|   |           |   |");
+                    System.out.println("	|   |           |   |");
+                    System.out.println("	|   |           |   |");
+                    System.out.println("	|   |           |   |");
+                    System.out.println("	|   |           |   |");
+                    System.out.println("	|   |___________|   |");
+                    System.out.println("	|___________________|");  
+                    
+                    String s1="\\";
+                    String s2="/";
+                    System.out.println(" __________                       __________");
+                    System.out.println("|           "+s1+"                    "+s2+"          |");
+                    System.out.println("|            "+s1+"                  "+s2+"           |");
+                    System.out.println("|       | "+s1+"   "+s1+"                "+s2+"   "+s2+"| 	    |");
+                    System.out.println("|       |  "+s1+"   "+s1+"              "+s2+"   "+s2+" | 	    |");
+                    System.out.println("|       |   "+s1+"   "+s1+"            "+s2+"   "+s2+"  |	    |");
+                    System.out.println("|       |    "+s1+"   "+s1+"          "+s2+"   "+s2+"   |	    |");
+                    System.out.println("|       |     "+s1+"   "+s1+"        "+s2+"   "+s2+"    |       |");
+                    System.out.println("|       |      "+s1+"   "+s1+"      "+s2+"   "+s2+"     |       |");
+                    System.out.println("|       |       "+s1+"   "+s1+"____"+s2+"   "+s2+"      |       |");
+                    System.out.println("|       |        "+s1+"          "+s2+"       |       |");
+                    System.out.println("|       |         "+s1+"        "+s2+"        |       |");
+                    System.out.println("|_______|          "+s1+"______"+s2+"         |_______|");
+                
+                           }
                 else{
                     System.out.println("Dann passen sie auf!");
                     }
