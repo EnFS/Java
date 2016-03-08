@@ -209,11 +209,11 @@ public class Main {
 
             if (inpString.equals("info")) {
                 System.out.println(barnian + "\nKernel: While/DoWhile, weil mehr kann man den Prozessor net auslasten.");
-                System.out.println("Hostname: B138-Barner\nIP: N/A\nBrain: N/A\nGateway: Rückenmark\n");
+                System.out.println("Hostname: B138-"+username+"\nIP: N/A\nBrain: N/A\nGateway: Rückenmark\n");
             }
 
             if (inpString.equals("hostname")) {
-                System.out.println("B138-Barner");
+                System.out.println("B138-"+username);
             }
 
             if (inpString.equals("breakfast")) {
