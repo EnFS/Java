@@ -42,6 +42,7 @@ public class Main {
         //for-Schleife
         double bootsteps = 0.0001;
         boolean overbarned = false;
+        boolean iscomando = false;
 
         //Sysinfo
         String barnian = "Barnian 1.0";
@@ -154,7 +155,14 @@ public class Main {
             } //end login
 
             //Main screen
-            System.out.println(username + "@Barnian ~ $ ");
+            if(username.equals("root"))
+            {
+                System.out.print(username + "@Barnian ~ # ");
+            }else
+            {
+                System.out.print(username + "@Barnian ~ $ ");
+            }
+
             inpString = input.nextLine();
 
 
@@ -168,6 +176,7 @@ public class Main {
                     drunkmode = true;
                 }
                 System.out.println("Drunkmode: " + drunkmode);
+                iscomando = true;
             }
 
             //Addition
@@ -187,6 +196,7 @@ public class Main {
                     z2 = input.nextDouble();
                     System.out.println("Ergebnis: " + (z1 + z2));
                 }
+                iscomando = true;
             } //End addition
 
             //Subtraktion
@@ -206,15 +216,18 @@ public class Main {
                     z2 = input.nextDouble();
                     System.out.println("Ergebnis: " + (z1 - z2));
                 }
+                iscomando = true;
             } //End subtraktion
 
             if (inpString.equals("info")) {
                 System.out.println(barnian + "\nKernel: While/DoWhile, weil mehr kann man den Prozessor net auslasten.");
                 System.out.println("Hostname: B138-" + username + "\nIP: N/A\nBrain: N/A\nGateway: Rückenmark\n");
+                iscomando = true;
             }
 
             if (inpString.equals("hostname")) {
                 System.out.println("B138-" + username);
+                iscomando = true;
             }
 
             if (inpString.equals("breakfast")) {
@@ -223,6 +236,7 @@ public class Main {
                 } else {
                     System.out.println("In der Schule");
                 }
+                iscomando = true;
             }
 
             if (inpString.equals("v3")) {
@@ -232,27 +246,32 @@ public class Main {
                     System.out.println("Wenn ihr so unruhig seid,\nkönnt ihr auch ein kostenloses V3 Ticket bekommen.\n" +
                             "Danach seid ihr nicht mehr so zappelig, da das V3 beruhigt.\n");
                 }
+                iscomando = true;
             }
 
             if (inpString.equals("flussdiagramm")) {
                 System.out.println("Kein Flussdiagramm zu zeichnen ist genauso,\nwie nen Affen zu rasieren," +
                         " den mit Niveacreme einzucremen,\nin einen Anzug zu stecken und vor die Tastatur zu setzen.\n");
+                iscomando = true;
             }
             //barner
             if (inpString.equals("help")) {
                 System.out.println("Kommandos:");
                 System.out.println("exit\ndrunk\nflussdiagramm\nbreakfast\nhostname\nv3\ninfo\nminus\nplus\nbier\nsnake\neditor\n");
+                iscomando = true;
             }
             //lowski
             if (inpString.equals("help") && username.equals("lowski")) {
                 System.out.println("Kommandos:");
                 System.out.println("visio\nlangweilen\n");
+                iscomando = true;
             }
             if (inpString.equals("bier") && drunkmode) {
                 for (int i = 0; i < 10; i++) {
                     System.out.println("Bieeeeeeer!");
                     System.out.println("und die Apotheke rauchen!");
                 }
+                iscomando = true;
             }
 
             if (inpString.equals("editor")) {
@@ -261,21 +280,25 @@ public class Main {
                     System.out.println("Spaaaaaaaaaam");
                     System.out.println(text);
                 }
+                iscomando = true;
             }
 
             if (inpString.equals("exit") || inpString.equals("logout") || inpString.equals("bye")) {
                 login = false;
+                iscomando = true;
             }
 
             if (inpString.equals("samedcleaner")) {
                 //Viren sind für mich tabu!
                 System.out.println("Hier wird geputzt. Aber anständig!");
+                iscomando = true;
             }
 
             if (inpString.equals("reboot")) {
                 System.out.println("Briefbeschwerer wird neugestartet!");
                 boot = true;
                 login = false;
+                iscomando = true;
             }
 
             if (inpString.equals("quote")) {
@@ -288,6 +311,7 @@ public class Main {
                 if (zufall == 2) {
                     System.out.println("Teilen mit Rest. Also wir haben 5 Kinder und 18 BIER!");
                 }
+                iscomando = true;
             }
 
             if (inpString.equals("overbarn")) {
@@ -305,14 +329,17 @@ public class Main {
                         System.out.println("Rasieren sie einen Affen und drücken danach ENTER!");
                     }
                 }
+                iscomando = true;
             }
 
             if (inpString.equals("visio") && username.equals("lowski")) {
                 System.out.println("Visio ist auf diesem Barnian System leider noch nicht installiert.");
+                iscomando = true;
             }
 
             if (inpString.equals("powerpoint") || inpString.equals("barnipoint")) {
                 System.out.println("public static void main(\nString args[\n])\n{\nScanner tastatur =\nnew Scanner(System\n.in);\n\n}");
+                iscomando = true;
             }
 
             if (inpString.equals("raten")) {
@@ -335,6 +362,7 @@ public class Main {
                     }
                 }
                 System.out.println("Benötigte Versuche: " + versuche);
+                iscomando = true;
             }
 
             if (inpString.equals("snake")) {
@@ -589,6 +617,7 @@ public class Main {
                     if (snakePosition5.y > snakePosition6.y)
                         snakePosition6.y++;
                 }
+                iscomando = true;
             }
 
                 if (inpString.equals("langweilen") && username.equals("lowski")) {
@@ -661,7 +690,7 @@ public class Main {
                     } else {
                         System.out.println("Dann passen sie auf!");
                     }
-
+                    iscomando = true;
                 }
 
             if (inpString.equals("cowsay") || inpString.equals("gelaber")) {
@@ -674,10 +703,12 @@ public class Main {
                     while (randold == randomzahl || randold2 == randomzahl) {
                         randomzahl = (int) ((Math.random() * max) + 1);
                     }
+                    if (debugging)
+                    {
                     System.out.println(randomzahl + " " + randold + " " + randold2);
                     randold2 = randold;
                     randold = randomzahl;
-
+                    }
                     switch (randomzahl) {
                         case 1:
                             randstring = "V3";
@@ -717,11 +748,12 @@ public class Main {
                 } else {
                     System.out.println(username + ": " + text);
                 }
+                iscomando = true;
             }
 
 
             //Empty Inputstring
-            if (inpString.isEmpty()) {
+            if (inpString.isEmpty() || !iscomando) {
                 if (drunkmode) {
                     int zufall = 10;
                     zufall = (int) (Math.random() * 5);
@@ -751,10 +783,8 @@ public class Main {
                     }
                     emptycounter++;
                 }
+                iscomando = false;
             }
-
-
-            //end main while
         }
 
     }
