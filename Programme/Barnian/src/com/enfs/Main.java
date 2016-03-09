@@ -31,7 +31,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-	    //Init
+        //Init
         Scanner input = new Scanner(System.in);
         boolean drunkmode = false;
         String inpString = "";
@@ -47,8 +47,7 @@ public class Main {
         String barnian = "Barnian 1.0";
 
         //Debugging aktivieren.
-        boolean debugging = false;
-
+        boolean debugging = true;
 
 
         while (!inpString.equals("poweroff")) {
@@ -151,7 +150,7 @@ public class Main {
                     } else {
                         System.out.println("Anmeldung fehlgeschlagen.\nBitte rasieren Sie einen Affen und probieren es erneut.\n");
                     }
-                } while(!correct);
+                } while (!correct);
             } //end login
 
             //Main screen
@@ -211,11 +210,11 @@ public class Main {
 
             if (inpString.equals("info")) {
                 System.out.println(barnian + "\nKernel: While/DoWhile, weil mehr kann man den Prozessor net auslasten.");
-                System.out.println("Hostname: B138-"+username+"\nIP: N/A\nBrain: N/A\nGateway: Rückenmark\n");
+                System.out.println("Hostname: B138-" + username + "\nIP: N/A\nBrain: N/A\nGateway: Rückenmark\n");
             }
 
             if (inpString.equals("hostname")) {
-                System.out.println("B138-"+username);
+                System.out.println("B138-" + username);
             }
 
             if (inpString.equals("breakfast")) {
@@ -231,13 +230,13 @@ public class Main {
                     System.out.println("Wenn ihr googeln wollt, könnt ihr das auch beim V3 machen. Dann aber auf Papier!");
                 } else {
                     System.out.println("Wenn ihr so unruhig seid,\nkönnt ihr auch ein kostenloses V3 Ticket bekommen.\n" +
-                    "Danach seid ihr nicht mehr so zappelig, da das V3 beruhigt.\n");
+                            "Danach seid ihr nicht mehr so zappelig, da das V3 beruhigt.\n");
                 }
             }
 
             if (inpString.equals("flussdiagramm")) {
                 System.out.println("Kein Flussdiagramm zu zeichnen ist genauso,\nwie nen Affen zu rasieren," +
-                " den mit Niveacreme einzucremen,\nin einen Anzug zu stecken und vor die Tastatur zu setzen.\n");
+                        " den mit Niveacreme einzucremen,\nin einen Anzug zu stecken und vor die Tastatur zu setzen.\n");
             }
             //barner
             if (inpString.equals("help")) {
@@ -337,344 +336,390 @@ public class Main {
                 }
                 System.out.println("Benötigte Versuche: " + versuche);
             }
-            if (inpString.equals("snake")){
-                java.awt.Point playerPosition = new java.awt.Point( 10, 9 );
-    java.awt.Point snakePosition  = new java.awt.Point( 30, 2 );
-    java.awt.Point snakePosition2  = new java.awt.Point( 31, 2 );
-    java.awt.Point snakePosition3  = new java.awt.Point( 32, 2 );
-    java.awt.Point snakePosition4  = new java.awt.Point( 33, 2 );
-    java.awt.Point snakePosition5  = new java.awt.Point( 34, 2 );
-    java.awt.Point snakePosition6  = new java.awt.Point( 35, 2 );
-    java.awt.Point goldPosition1   = new java.awt.Point( 6, 6 );
-    java.awt.Point goldPosition2  = new java.awt.Point( 1, 1 );
-    java.awt.Point goldPosition3   = new java.awt.Point( 9, 9 );
-    java.awt.Point goldPosition4   = new java.awt.Point( 30, 6 );
-    java.awt.Point goldPosition5   = new java.awt.Point( 30, 1 );
-    java.awt.Point doorPosition   = new java.awt.Point( 0, 5 );
-    boolean rich1 = false;
-    boolean rich2 = false;
-    boolean rich3 = false;
-    boolean rich4 = false;
-    boolean rich5 = false;
 
-    
+            if (inpString.equals("snake")) {
+                java.awt.Point playerPosition = new java.awt.Point(10, 9);
+                java.awt.Point snakePosition = new java.awt.Point(30, 2);
+                java.awt.Point snakePosition2 = new java.awt.Point(31, 2);
+                java.awt.Point snakePosition3 = new java.awt.Point(32, 2);
+                java.awt.Point snakePosition4 = new java.awt.Point(33, 2);
+                java.awt.Point snakePosition5 = new java.awt.Point(34, 2);
+                java.awt.Point snakePosition6 = new java.awt.Point(35, 2);
+                java.awt.Point goldPosition1 = new java.awt.Point(6, 6);
+                java.awt.Point goldPosition2 = new java.awt.Point(1, 1);
+                java.awt.Point goldPosition3 = new java.awt.Point(9, 9);
+                java.awt.Point goldPosition4 = new java.awt.Point(30, 6);
+                java.awt.Point goldPosition5 = new java.awt.Point(30, 1);
+                java.awt.Point doorPosition = new java.awt.Point(0, 5);
+                boolean rich1 = false;
+                boolean rich2 = false;
+                boolean rich3 = false;
+                boolean rich4 = false;
+                boolean rich5 = false;
 
-    while ( true )
-    {
-      // Raster mit Figuren zeichnen
 
-      for ( int y = 0; y < 10; y++ )
-      {
-        for ( int x = 0; x < 40; x++ )
-        {
-          Point p = new Point( x, y );
-          if ( playerPosition.equals( p ) )
-            System.out.print( '&' );
-          else if ( snakePosition.equals( p ) )
-            System.out.print( 'S' );
-          else if ( snakePosition2.equals( p ) )
-            System.out.print( 'x' );
-          else if ( snakePosition3.equals( p ) )
-            System.out.print( 'o' );
-          else if ( snakePosition4.equals( p ) )
-            System.out.print( 'x' );
-          else if ( snakePosition5.equals( p ) )
-            System.out.print( 'o' );
-          else if ( snakePosition6.equals( p ) )
-            System.out.print( 'x' );
-          else if ( goldPosition1.equals( p ) )
-            System.out.print( '$' );
-          else if ( goldPosition2.equals( p ) )
-            System.out.print( '$' );
-          else if ( goldPosition3.equals( p ) )
-            System.out.print( '$' );
-          else if ( goldPosition4.equals( p ) )
-            System.out.print( '$' );
-          else if ( goldPosition5.equals( p ) )
-            System.out.print( '$' );
-          else if ( doorPosition.equals( p ) )
-            System.out.print( '#' );
-          else System.out.print( '.' );
-        }
-        System.out.println();
-      }
+                while (true) {
+                    // Raster mit Figuren zeichnen
 
-      // Status feststellen
-
-      
-      if ( rich1 && rich2 && rich3 && rich4 && rich5 && playerPosition.equals( doorPosition ) )
-      {
-        System.out.println( "Gewonnen!" );
-        break;
-      }
-      if ( playerPosition.equals( snakePosition ) )
-      {
-        System.out.println( "ZZZZZZZ. Die Schlange hat dich!" );
-        break;
-      }
-      
-      if ( playerPosition.equals( snakePosition2 ) )
-      {
-        System.out.println( "ZZZZZZZ. Die Schlange hat dich!" );
-        break;
-      }
-      
-      if ( playerPosition.equals( snakePosition3 ) )
-      {
-        System.out.println( "ZZZZZZZ. Die Schlange hat dich!" );
-        break;
-      }
-      
-      if ( playerPosition.equals( snakePosition4 ) )
-      {
-        System.out.println( "ZZZZZZZ. Die Schlange hat dich!" );
-        break;
-      }
-      
-      if ( playerPosition.equals( snakePosition5 ) )
-      {
-        System.out.println( "ZZZZZZZ. Die Schlange hat dich!" );
-        break;
-      }
-      if ( playerPosition.equals( snakePosition6 ) )
-      {
-        System.out.println( "ZZZZZZZ. Die Schlange hat dich!" );
-        break;
-      }
-      if ( playerPosition.equals( goldPosition1 ) )
-      {
-        rich1 = true;
-        goldPosition1.setLocation(-1, -1);
-        snakePosition.setLocation(30, 10);
-        snakePosition2.setLocation(31, 10);
-        snakePosition3.setLocation(32, 10);
-        snakePosition4.setLocation(33, 10);
-        snakePosition5.setLocation(34, 10);
-        snakePosition6.setLocation(35, 10);
-             
-      }
-      if ( playerPosition.equals( goldPosition2 ) )
-      {
-        rich2 = true;
-        goldPosition2.setLocation(-1, -1);
-        snakePosition.setLocation(0, 15);
-        snakePosition2.setLocation(-1, 15);
-        snakePosition3.setLocation(-2, 15);
-        snakePosition4.setLocation(-3, 15);
-        snakePosition5.setLocation(-4, 15);
-        snakePosition6.setLocation(-5, 15);
-      
-      }
-      
-      if ( playerPosition.equals( goldPosition3 ) )
-      {
-        rich3 = true;
-        goldPosition3.setLocation(-1, -1);
-       }
-      if ( playerPosition.equals( goldPosition4 ) )
-      {
-        rich4 = true;
-        goldPosition4.setLocation(-1, -1);
-        snakePosition.setLocation(32, 0);
-        snakePosition2.setLocation(33, 0);
-        snakePosition3.setLocation(34, 0);
-        snakePosition4.setLocation(35, 0);
-        snakePosition5.setLocation(36, 0);
-        snakePosition6.setLocation(37, 0);
-      }
-      if ( playerPosition.equals( goldPosition5 ) )
-        {
-        rich5 = true;
-        goldPosition5.setLocation(-1, -1);
-        snakePosition.setLocation(1, 1);
-        snakePosition2.setLocation(0, 1);
-        snakePosition3.setLocation(-1, 1);
-        snakePosition4.setLocation(-2, 1);
-        snakePosition5.setLocation(-3, 1);
-        snakePosition6.setLocation(-4, 1);
-      }
-
-      // Konsoleneingabe und Spielerposition verändern
-      //Ging leider nicht anders ^^
-      switch ( new java.util.Scanner( System.in ).next().charAt( 0 ) )
-      {
-        case 'w' : playerPosition.y = Math.max(  0, playerPosition.y - 1 ); break;
-        case 's' : playerPosition.y = Math.min(  9, playerPosition.y + 1 ); break;
-        case 'a' : playerPosition.x = Math.max(  0, playerPosition.x - 1 ); break;
-        case 'd' : playerPosition.x = Math.min( 39, playerPosition.x + 1 ); break;
-      }
-
-      // Schlange bewegt sich in Richtung Spieler
-
-      if ( playerPosition.x < snakePosition.x )
-        snakePosition.x--;
-      else if ( playerPosition.x > snakePosition.x )
-          snakePosition.x++;
-      if ( playerPosition.y < snakePosition.y )
-        snakePosition.y--;
-      else if ( playerPosition.y > snakePosition.y )
-        snakePosition.y++;
-      
-      //Schlangezweiterteil2
-      
-      if (snakePosition.x < snakePosition2.x )
-          snakePosition2.x--;
-                    
-      
-      if (snakePosition.x > snakePosition2.x )
-          snakePosition2.x++;
-          
-     
-      if (snakePosition.y < snakePosition2.y )
-          snakePosition2.y--;
-                    
-      
-      if (snakePosition.y > snakePosition2.y )
-          snakePosition2.y++;
-     
-     
-
-//schlange3
-      
-      if (snakePosition2.x < snakePosition3.x )
-          snakePosition3.x--;
-                    
-      
-      if (snakePosition2.x > snakePosition3.x )
-          snakePosition3.x++;
-          
-     
-      if (snakePosition2.y < snakePosition3.y )
-          snakePosition3.y--;
-                    
-      
-      if (snakePosition2.y > snakePosition3.y )
-          snakePosition3.y++;   
-      
-      //schlange4
-      if (snakePosition3.x < snakePosition4.x )
-          snakePosition4.x--;
-                    
-      
-      if (snakePosition3.x > snakePosition4.x )
-          snakePosition4.x++;
-          
-     
-      if (snakePosition3.y < snakePosition4.y )
-          snakePosition4.y--;
-                    
-      
-      if (snakePosition3.y > snakePosition4.y )
-          snakePosition4.y++;
-      
-      //Schlange5
-      if (snakePosition4.x < snakePosition5.x )
-          snakePosition5.x--;
-                    
-      
-      if (snakePosition4.x > snakePosition5.x )
-          snakePosition5.x++;
-          
-     
-      if (snakePosition4.y < snakePosition5.y )
-          snakePosition5.y--;
-                    
-      
-      if (snakePosition4.y > snakePosition5.y )
-          snakePosition5.y++;
-      
-      //schlange6
-      if (snakePosition5.x < snakePosition6.x )
-          snakePosition6.x--;
-                    
-      
-      if (snakePosition5.x > snakePosition6.x )
-          snakePosition6.x++;
-          
-     
-      if (snakePosition5.y < snakePosition6.y )
-          snakePosition6.y--;
-                    
-      
-      if (snakePosition5.y > snakePosition6.y )
-          snakePosition6.y++;
-    
-            }
-            if (inpString.equals("langweilen") && username.equals("lowski")){
-                
-                String abfrage = "ja"; 
-                System.out.println("Langweilen sie sich?");
-                System.out.println("JA/NEIN");
-                abfrage = input.nextLine();
-                int simon = 0;
-                if(abfrage.equals("ja")) {
-                    while(simon<=5){
-                    System.out.println("Dann gehen sie zum Toom! Kaffee saufen!");
-                    System.out.println(" ___________________________________");
-                    System.out.println("|				    |");						
-                    System.out.println("|				    |");			
-                    System.out.println("|                                   |");		
-                    System.out.println("|___________|   	|___________|");			
-                    System.out.println("            |           |");	
-                    System.out.println("            |		|");	
-                    System.out.println("            |		|");
-                    System.out.println("            |		|");
-                    System.out.println("            |		|");
-                    System.out.println("            |		|");
-                    System.out.println("            |___________|");
-                    simon ++;
+                    for (int y = 0; y < 10; y++) {
+                        for (int x = 0; x < 40; x++) {
+                            Point p = new Point(x, y);
+                            if (playerPosition.equals(p))
+                                System.out.print('&');
+                            else if (snakePosition.equals(p))
+                                System.out.print('S');
+                            else if (snakePosition2.equals(p))
+                                System.out.print('x');
+                            else if (snakePosition3.equals(p))
+                                System.out.print('o');
+                            else if (snakePosition4.equals(p))
+                                System.out.print('x');
+                            else if (snakePosition5.equals(p))
+                                System.out.print('o');
+                            else if (snakePosition6.equals(p))
+                                System.out.print('x');
+                            else if (goldPosition1.equals(p))
+                                System.out.print('$');
+                            else if (goldPosition2.equals(p))
+                                System.out.print('$');
+                            else if (goldPosition3.equals(p))
+                                System.out.print('$');
+                            else if (goldPosition4.equals(p))
+                                System.out.print('$');
+                            else if (goldPosition5.equals(p))
+                                System.out.print('$');
+                            else if (doorPosition.equals(p))
+                                System.out.print('#');
+                            else System.out.print('.');
+                        }
+                        System.out.println();
                     }
-			
-                    System.out.println("	 ___________________");
-                    System.out.println("	|    ___________    |");
-                    System.out.println("	|   |           |   |");
-                    System.out.println("	|   |           |   |");
-                    System.out.println("	|   |           |   |");
-                    System.out.println("	|   |           |   |");
-                    System.out.println("	|   |           |   |");
-                    System.out.println("	|   |           |   |");
-                    System.out.println("	|   |           |   |");
-                    System.out.println("	|   |           |   |");
-                    System.out.println("	|   |___________|   |");
-                    System.out.println("	|___________________|");    
 
-                         System.out.println("	 ___________________");
-                    System.out.println("	|    ___________    |");
-                    System.out.println("	|   |           |   |");
-                    System.out.println("	|   |           |   |");
-                    System.out.println("	|   |           |   |");
-                    System.out.println("	|   |           |   |");
-                    System.out.println("	|   |           |   |");
-                    System.out.println("	|   |           |   |");
-                    System.out.println("	|   |           |   |");
-                    System.out.println("	|   |           |   |");
-                    System.out.println("	|   |___________|   |");
-                    System.out.println("	|___________________|");  
-                    
-                    String s1="\\";
-                    String s2="/";
-                    System.out.println(" __________                       __________");
-                    System.out.println("|           "+s1+"                    "+s2+"          |");
-                    System.out.println("|            "+s1+"                  "+s2+"           |");
-                    System.out.println("|       | "+s1+"   "+s1+"                "+s2+"   "+s2+"| 	    |");
-                    System.out.println("|       |  "+s1+"   "+s1+"              "+s2+"   "+s2+" | 	    |");
-                    System.out.println("|       |   "+s1+"   "+s1+"            "+s2+"   "+s2+"  |	    |");
-                    System.out.println("|       |    "+s1+"   "+s1+"          "+s2+"   "+s2+"   |	    |");
-                    System.out.println("|       |     "+s1+"   "+s1+"        "+s2+"   "+s2+"    |       |");
-                    System.out.println("|       |      "+s1+"   "+s1+"      "+s2+"   "+s2+"     |       |");
-                    System.out.println("|       |       "+s1+"   "+s1+"____"+s2+"   "+s2+"      |       |");
-                    System.out.println("|       |        "+s1+"          "+s2+"       |       |");
-                    System.out.println("|       |         "+s1+"        "+s2+"        |       |");
-                    System.out.println("|_______|          "+s1+"______"+s2+"         |_______|");
-                
-                           }
-                else{
-                    System.out.println("Dann passen sie auf!");
+                    // Status feststellen
+
+
+                    if (rich1 && rich2 && rich3 && rich4 && rich5 && playerPosition.equals(doorPosition)) {
+                        System.out.println("Gewonnen!");
+                        break;
                     }
-                   
+                    if (playerPosition.equals(snakePosition)) {
+                        System.out.println("ZZZZZZZ. Die Schlange hat dich!");
+                        break;
+                    }
+
+                    if (playerPosition.equals(snakePosition2)) {
+                        System.out.println("ZZZZZZZ. Die Schlange hat dich!");
+                        break;
+                    }
+
+                    if (playerPosition.equals(snakePosition3)) {
+                        System.out.println("ZZZZZZZ. Die Schlange hat dich!");
+                        break;
+                    }
+
+                    if (playerPosition.equals(snakePosition4)) {
+                        System.out.println("ZZZZZZZ. Die Schlange hat dich!");
+                        break;
+                    }
+
+                    if (playerPosition.equals(snakePosition5)) {
+                        System.out.println("ZZZZZZZ. Die Schlange hat dich!");
+                        break;
+                    }
+                    if (playerPosition.equals(snakePosition6)) {
+                        System.out.println("ZZZZZZZ. Die Schlange hat dich!");
+                        break;
+                    }
+                    if (playerPosition.equals(goldPosition1)) {
+                        rich1 = true;
+                        goldPosition1.setLocation(-1, -1);
+                        snakePosition.setLocation(30, 10);
+                        snakePosition2.setLocation(31, 10);
+                        snakePosition3.setLocation(32, 10);
+                        snakePosition4.setLocation(33, 10);
+                        snakePosition5.setLocation(34, 10);
+                        snakePosition6.setLocation(35, 10);
+
+                    }
+                    if (playerPosition.equals(goldPosition2)) {
+                        rich2 = true;
+                        goldPosition2.setLocation(-1, -1);
+                        snakePosition.setLocation(0, 15);
+                        snakePosition2.setLocation(-1, 15);
+                        snakePosition3.setLocation(-2, 15);
+                        snakePosition4.setLocation(-3, 15);
+                        snakePosition5.setLocation(-4, 15);
+                        snakePosition6.setLocation(-5, 15);
+
+                    }
+
+                    if (playerPosition.equals(goldPosition3)) {
+                        rich3 = true;
+                        goldPosition3.setLocation(-1, -1);
+                    }
+                    if (playerPosition.equals(goldPosition4)) {
+                        rich4 = true;
+                        goldPosition4.setLocation(-1, -1);
+                        snakePosition.setLocation(32, 0);
+                        snakePosition2.setLocation(33, 0);
+                        snakePosition3.setLocation(34, 0);
+                        snakePosition4.setLocation(35, 0);
+                        snakePosition5.setLocation(36, 0);
+                        snakePosition6.setLocation(37, 0);
+                    }
+                    if (playerPosition.equals(goldPosition5)) {
+                        rich5 = true;
+                        goldPosition5.setLocation(-1, -1);
+                        snakePosition.setLocation(1, 1);
+                        snakePosition2.setLocation(0, 1);
+                        snakePosition3.setLocation(-1, 1);
+                        snakePosition4.setLocation(-2, 1);
+                        snakePosition5.setLocation(-3, 1);
+                        snakePosition6.setLocation(-4, 1);
+                    }
+
+                    // Konsoleneingabe und Spielerposition verändern
+                    //Ging leider nicht anders ^^
+                    switch (new java.util.Scanner(System.in).next().charAt(0)) {
+                        case 'w':
+                            playerPosition.y = Math.max(0, playerPosition.y - 1);
+                            break;
+                        case 's':
+                            playerPosition.y = Math.min(9, playerPosition.y + 1);
+                            break;
+                        case 'a':
+                            playerPosition.x = Math.max(0, playerPosition.x - 1);
+                            break;
+                        case 'd':
+                            playerPosition.x = Math.min(39, playerPosition.x + 1);
+                            break;
+                    }
+
+                    // Schlange bewegt sich in Richtung Spieler
+
+                    if (playerPosition.x < snakePosition.x)
+                        snakePosition.x--;
+                    else if (playerPosition.x > snakePosition.x)
+                        snakePosition.x++;
+                    if (playerPosition.y < snakePosition.y)
+                        snakePosition.y--;
+                    else if (playerPosition.y > snakePosition.y)
+                        snakePosition.y++;
+
+                    //Schlangezweiterteil2
+
+                    if (snakePosition.x < snakePosition2.x)
+                        snakePosition2.x--;
+
+
+                    if (snakePosition.x > snakePosition2.x)
+                        snakePosition2.x++;
+
+
+                    if (snakePosition.y < snakePosition2.y)
+                        snakePosition2.y--;
+
+
+                    if (snakePosition.y > snakePosition2.y)
+                        snakePosition2.y++;
+
+
+                    //schlange3
+
+                    if (snakePosition2.x < snakePosition3.x)
+                        snakePosition3.x--;
+
+
+                    if (snakePosition2.x > snakePosition3.x)
+                        snakePosition3.x++;
+
+
+                    if (snakePosition2.y < snakePosition3.y)
+                        snakePosition3.y--;
+
+
+                    if (snakePosition2.y > snakePosition3.y)
+                        snakePosition3.y++;
+
+                    //schlange4
+                    if (snakePosition3.x < snakePosition4.x)
+                        snakePosition4.x--;
+
+
+                    if (snakePosition3.x > snakePosition4.x)
+                        snakePosition4.x++;
+
+
+                    if (snakePosition3.y < snakePosition4.y)
+                        snakePosition4.y--;
+
+
+                    if (snakePosition3.y > snakePosition4.y)
+                        snakePosition4.y++;
+
+                    //Schlange5
+                    if (snakePosition4.x < snakePosition5.x)
+                        snakePosition5.x--;
+
+
+                    if (snakePosition4.x > snakePosition5.x)
+                        snakePosition5.x++;
+
+
+                    if (snakePosition4.y < snakePosition5.y)
+                        snakePosition5.y--;
+
+
+                    if (snakePosition4.y > snakePosition5.y)
+                        snakePosition5.y++;
+
+                    //schlange6
+                    if (snakePosition5.x < snakePosition6.x)
+                        snakePosition6.x--;
+
+
+                    if (snakePosition5.x > snakePosition6.x)
+                        snakePosition6.x++;
+
+
+                    if (snakePosition5.y < snakePosition6.y)
+                        snakePosition6.y--;
+
+
+                    if (snakePosition5.y > snakePosition6.y)
+                        snakePosition6.y++;
+                }
             }
-                              
-                
+
+                if (inpString.equals("langweilen") && username.equals("lowski")) {
+
+                    String abfrage = "ja";
+                    System.out.println("Langweilen sie sich?");
+                    System.out.println("JA/NEIN");
+                    abfrage = input.nextLine();
+                    int simon = 0;
+                    if (abfrage.equals("ja")) {
+                        while (simon <= 5) {
+                            System.out.println("Dann gehen sie zum Toom! Kaffee saufen!");
+                            System.out.println(" ___________________________________");
+                            System.out.println("|				    |");
+                            System.out.println("|				    |");
+                            System.out.println("|                                   |");
+                            System.out.println("|___________|   	|___________|");
+                            System.out.println("            |           |");
+                            System.out.println("            |		|");
+                            System.out.println("            |		|");
+                            System.out.println("            |		|");
+                            System.out.println("            |		|");
+                            System.out.println("            |		|");
+                            System.out.println("            |___________|");
+                            simon++;
+                        }
+
+                        System.out.println("	 ___________________");
+                        System.out.println("	|    ___________    |");
+                        System.out.println("	|   |           |   |");
+                        System.out.println("	|   |           |   |");
+                        System.out.println("	|   |           |   |");
+                        System.out.println("	|   |           |   |");
+                        System.out.println("	|   |           |   |");
+                        System.out.println("	|   |           |   |");
+                        System.out.println("	|   |           |   |");
+                        System.out.println("	|   |           |   |");
+                        System.out.println("	|   |___________|   |");
+                        System.out.println("	|___________________|");
+
+                        System.out.println("	 ___________________");
+                        System.out.println("	|    ___________    |");
+                        System.out.println("	|   |           |   |");
+                        System.out.println("	|   |           |   |");
+                        System.out.println("	|   |           |   |");
+                        System.out.println("	|   |           |   |");
+                        System.out.println("	|   |           |   |");
+                        System.out.println("	|   |           |   |");
+                        System.out.println("	|   |           |   |");
+                        System.out.println("	|   |           |   |");
+                        System.out.println("	|   |___________|   |");
+                        System.out.println("	|___________________|");
+
+                        String s1 = "\\";
+                        String s2 = "/";
+                        System.out.println(" __________                       __________");
+                        System.out.println("|           " + s1 + "                    " + s2 + "          |");
+                        System.out.println("|            " + s1 + "                  " + s2 + "           |");
+                        System.out.println("|       | " + s1 + "   " + s1 + "                " + s2 + "   " + s2 + "| 	    |");
+                        System.out.println("|       |  " + s1 + "   " + s1 + "              " + s2 + "   " + s2 + " | 	    |");
+                        System.out.println("|       |   " + s1 + "   " + s1 + "            " + s2 + "   " + s2 + "  |	    |");
+                        System.out.println("|       |    " + s1 + "   " + s1 + "          " + s2 + "   " + s2 + "   |	    |");
+                        System.out.println("|       |     " + s1 + "   " + s1 + "        " + s2 + "   " + s2 + "    |       |");
+                        System.out.println("|       |      " + s1 + "   " + s1 + "      " + s2 + "   " + s2 + "     |       |");
+                        System.out.println("|       |       " + s1 + "   " + s1 + "____" + s2 + "   " + s2 + "      |       |");
+                        System.out.println("|       |        " + s1 + "          " + s2 + "       |       |");
+                        System.out.println("|       |         " + s1 + "        " + s2 + "        |       |");
+                        System.out.println("|_______|          " + s1 + "______" + s2 + "         |_______|");
+
+                    } else {
+                        System.out.println("Dann passen sie auf!");
+                    }
+
+                }
+
+            if (inpString.equals("cowsay") || inpString.equals("gelaber")) {
+                String text = "";
+                String randstring = "";
+                int max = 5;
+                int randomzahl, randold = 0, randold2 = 0;
+                for (int i = 0; i < 10; i++) {
+                    randomzahl = (int) ((Math.random() * max) + 1);
+                    while (randold == randomzahl || randold2 == randomzahl) {
+                        randomzahl = (int) ((Math.random() * max) + 1);
+                    }
+                    System.out.println(randomzahl + " " + randold + " " + randold2);
+                    randold2 = randold;
+                    randold = randomzahl;
+
+                    switch (randomzahl) {
+                        case 1:
+                            randstring = "V3";
+                            break;
+                        case 2:
+                            randstring = "Affe";
+                            break;
+                        case 3:
+                            randstring = "rasiert";
+                            break;
+                        case 4:
+                            randstring = "bier";
+                            break;
+                        case 5:
+                            randstring = "du hast";
+                            break;
+                    }
+                    text += randstring + " ";
+                }
+
+                if (inpString.equals("cowsay")) {
+                    int i;
+                    String minus = "----";
+                    String minus2 = "____";
+                    for (i = 0; i < text.length(); i++) {
+                        minus += "-";
+                        minus2 += "_";
+                    }
+                    System.out.println(minus2);
+                    System.out.println("< " + text + " >");
+                    System.out.println(minus);
+                    System.out.println("   \\    ^__^");
+                    System.out.println("    \\   (oo)\\_______");
+                    System.out.println("        (__)\\       )\\/\\");
+                    System.out.println("            ||----w |");
+                    System.out.println("            ||     ||");
+                } else {
+                    System.out.println(username + ": " + text);
+                }
+            }
+
+
             //Empty Inputstring
             if (inpString.isEmpty()) {
                 if (drunkmode) {
