@@ -43,9 +43,14 @@ public class Main {
         double bootsteps = 0.0001;
         boolean overbarned = false;
         boolean iscomando = false;
+        int randip = 0;
 
         //Sysinfo
         String barnian = "Barnian 1.0";
+        String IP = "13.37.42.";
+        //Standard home directory: ~
+        String directory = "~";
+
 
         //Debugging aktivieren.
         boolean debugging = true;
@@ -127,6 +132,9 @@ public class Main {
                 System.out.println("That's it!");
                 System.out.println("Nice and fast Barnian boot!\n\n\n");
 
+                //Set IP on boot
+                randip = (int) ((Math.random() * 253) + 1);
+
                 //Welcome Message
                 if (overbarned) {
                     System.out.println(barnian + " Alles geht mit Java und while!\nBarnian wurde overbarned! Nutzung auf eigene Gefahr!\n");
@@ -157,10 +165,10 @@ public class Main {
             //Main screen
             if(username.equals("root"))
             {
-                System.out.print(username + "@Barnian ~ # ");
+                System.out.print(username + "@Barnian: " + directory + " # ");
             }else
             {
-                System.out.print(username + "@Barnian ~ $ ");
+                System.out.print(username + "@Barnian: " + directory + " $ ");
             }
 
             inpString = input.nextLine();
@@ -220,8 +228,9 @@ public class Main {
             } //End subtraktion
 
             if (inpString.equals("info")) {
+                //int randip = (int) ((Math.random() * 253) + 1);
                 System.out.println(barnian + "\nKernel: While/DoWhile, weil mehr kann man den Prozessor net auslasten.");
-                System.out.println("Hostname: B138-" + username + "\nIP: N/A\nBrain: N/A\nGateway: Rückenmark\n");
+                System.out.println("Hostname: B138-" + username + "\nIP: " + IP + randip + "\nBrain: N/A\nGateway: Rückenmark\n");
                 iscomando = true;
             }
 
@@ -729,6 +738,9 @@ public class Main {
                     text += randstring + " ";
                 }
 
+                /* TODO: monkeysay, bottlesay, ... */
+
+
                 if (inpString.equals("cowsay")) {
                     int i;
                     String minus = "----";
@@ -750,6 +762,58 @@ public class Main {
                 }
                 iscomando = true;
             }
+
+
+            if (inpString.equals("quersumme")) {
+                int zahl, quersumme = 0, rest;
+
+                System.out.print("Bitte geben Sie eine Zahl in die Mühle ein: ");
+                zahl = input.nextInt();
+
+                //Die Mühle
+                while (zahl > 0) {
+                    rest = zahl % 10;
+                    quersumme += rest;
+                    zahl /= 10;
+                }
+
+                System.out.println("Die Mühle kommt zu dem Ergebnis: " + quersumme);
+                iscomando = true;
+            }
+
+            if (inpString.equals("ipconfig") || inpString.equals("ifconfig")) {
+                System.out.println("IP: " + IP + randip);
+                iscomando = true;
+            }
+
+            //Start Pseudo Filesystem
+
+            if (inpString.substring(0, 3).equals("cd ")) {
+                String pathname = inpString.substring(3, inpString.length());
+                if (!pathname.substring(0, 1).equals("/")) {
+                    directory += "/" + pathname;
+                } else {
+                    if (pathname.equals("/home/" + username)) {
+                        directory = "~";
+                    } else {
+                        directory = pathname;
+                    }
+                }
+                System.out.println(pathname);
+                iscomando = true;
+            }
+
+            if (inpString.equals("ls")) {
+                String list = "";
+                if (directory.equals("/")) {
+                    list += "boot   home   barnian";
+                }
+                System.out.println(list);
+                iscomando = true;
+            }
+
+
+            //End Pseudo Filesystem
 
 
             //Empty Inputstring
