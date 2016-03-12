@@ -21,6 +21,10 @@ package com.enfs;
  * - help angepasst
  * - langweilen bei Lowski mit logo
  * - snake
+ * - bottlesay
+ * - ls
+ * - cd
+ * - quersumme
  * TODO: Befehlsliste aktualisieren
  */
 
@@ -46,7 +50,7 @@ public class Main {
         int randip = 0;
 
         //Sysinfo
-        String barnian = "Barnian 1.0";
+        String barnian = "Barnian 1.1";
         String IP = "13.37.42.";
         //Standard home directory: ~
         String directory = "~";
@@ -85,7 +89,7 @@ public class Main {
                     System.out.println("==+?======+I?$DDNMNI?+====~~~~~~~~~=II7ZZOZZOOO8O8OO8OO8OOOO8OOO$++=~:::::,,,,,M");
                     System.out.println("==+?:,:,,,,=+7ODNMI++====~~~~~~~~~~?+?7ZOOZZOZOOOOZOOO8ZOOOZ8OOZ$???????++?++=~M");
                     System.out.println("==+?:,,,,,,::+Z8D$+=====~~~~~~~~~~~~~=IZ$ZZZOOOOOOOOOZOOZOZOO8OZI?+??++???+????M");
-                    System.out.println("===?:,.,,,,,,:Z8D++=====~=~~" + x + "%~~~~~~+7$ZZ$ZOZOOOZOOZZOOOOOO88Z$++?++++???????M");
+                    System.out.println("===?:,.,,,,,,:Z8D++=====~=~~" + x + "%~~~~~~+7$ZZ$ZOZOOOZOOZZOOOOOO88Z$++?++++??????M");
                     System.out.println("7I+?,.,,,,,,,:7OZ+=====~~~~~~~~~~~~~~~=I7$$$OZZZOZZOZOZOZOO8OOOZ7??+???+???????M");
                     System.out.println("$$??,,,.,.,,.,?O$+=====~~~~~~=~~~~~~~~~?I77$$ZZZOO$ZZZZZZZO8ZOOZ7???+??????????M");
                     System.out.println("?I+?:,.,,,,..,~O7+====~~=~~~~~~~~~~~~~~=?I?I7$$ZZZZZZZZZZZZ8OOZZI?+????????+???M");
@@ -163,11 +167,9 @@ public class Main {
             } //end login
 
             //Main screen
-            if(username.equals("root"))
-            {
+            if (username.equals("root")) {
                 System.out.print(username + "@Barnian: " + directory + " # ");
-            }else
-            {
+            } else {
                 System.out.print(username + "@Barnian: " + directory + " $ ");
             }
 
@@ -629,104 +631,104 @@ public class Main {
                 iscomando = true;
             }
 
-                if (inpString.equals("langweilen") && username.equals("lowski")) {
+            if (inpString.equals("langweilen") && username.equals("lowski")) {
 
-                    String abfrage = "ja";
-                    System.out.println("Langweilen sie sich?");
-                    System.out.println("JA/NEIN");
-                    abfrage = input.nextLine();
-                    int simon = 0;
-                    if (abfrage.equals("ja")) {
-                        while (simon <= 5) {
-                            System.out.println("Dann gehen sie zum Toom! Kaffee saufen!");
-                            System.out.println(" ___________________________________");
-                            System.out.println("|				    |");
-                            System.out.println("|				    |");
-                            System.out.println("|                                   |");
-                            System.out.println("|___________|   	|___________|");
-                            System.out.println("            |           |");
-                            System.out.println("            |		|");
-                            System.out.println("            |		|");
-                            System.out.println("            |		|");
-                            System.out.println("            |		|");
-                            System.out.println("            |		|");
-                            System.out.println("            |___________|");
-                            simon++;
-                        }
-
-                        System.out.println("	 ___________________");
-                        System.out.println("	|    ___________    |");
-                        System.out.println("	|   |           |   |");
-                        System.out.println("	|   |           |   |");
-                        System.out.println("	|   |           |   |");
-                        System.out.println("	|   |           |   |");
-                        System.out.println("	|   |           |   |");
-                        System.out.println("	|   |           |   |");
-                        System.out.println("	|   |           |   |");
-                        System.out.println("	|   |           |   |");
-                        System.out.println("	|   |___________|   |");
-                        System.out.println("	|___________________|");
-
-                        System.out.println("	 ___________________");
-                        System.out.println("	|    ___________    |");
-                        System.out.println("	|   |           |   |");
-                        System.out.println("	|   |           |   |");
-                        System.out.println("	|   |           |   |");
-                        System.out.println("	|   |           |   |");
-                        System.out.println("	|   |           |   |");
-                        System.out.println("	|   |           |   |");
-                        System.out.println("	|   |           |   |");
-                        System.out.println("	|   |           |   |");
-                        System.out.println("	|   |___________|   |");
-                        System.out.println("	|___________________|");
-
-                        String s1 = "\\";
-                        String s2 = "/";
-                        System.out.println(" __________                       __________");
-                        System.out.println("|           " + s1 + "                    " + s2 + "          |");
-                        System.out.println("|            " + s1 + "                  " + s2 + "           |");
-                        System.out.println("|       | " + s1 + "   " + s1 + "                " + s2 + "   " + s2 + "| 	    |");
-                        System.out.println("|       |  " + s1 + "   " + s1 + "              " + s2 + "   " + s2 + " | 	    |");
-                        System.out.println("|       |   " + s1 + "   " + s1 + "            " + s2 + "   " + s2 + "  |	    |");
-                        System.out.println("|       |    " + s1 + "   " + s1 + "          " + s2 + "   " + s2 + "   |	    |");
-                        System.out.println("|       |     " + s1 + "   " + s1 + "        " + s2 + "   " + s2 + "    |       |");
-                        System.out.println("|       |      " + s1 + "   " + s1 + "      " + s2 + "   " + s2 + "     |       |");
-                        System.out.println("|       |       " + s1 + "   " + s1 + "____" + s2 + "   " + s2 + "      |       |");
-                        System.out.println("|       |        " + s1 + "          " + s2 + "       |       |");
-                        System.out.println("|       |         " + s1 + "        " + s2 + "        |       |");
-                        System.out.println("|_______|          " + s1 + "______" + s2 + "         |_______|");
-
-                    } else {
-                        System.out.println("Dann passen sie auf!");
+                String abfrage = "ja";
+                System.out.println("Langweilen sie sich?");
+                System.out.println("JA/NEIN");
+                abfrage = input.nextLine();
+                int simon = 0;
+                if (abfrage.equals("ja")) {
+                    while (simon <= 5) {
+                        System.out.println("Dann gehen sie zum Toom! Kaffee saufen!");
+                        System.out.println(" ___________________________________");
+                        System.out.println("|				    |");
+                        System.out.println("|				    |");
+                        System.out.println("|                                   |");
+                        System.out.println("|___________|   	|___________|");
+                        System.out.println("            |           |");
+                        System.out.println("            |		|");
+                        System.out.println("            |		|");
+                        System.out.println("            |		|");
+                        System.out.println("            |		|");
+                        System.out.println("            |		|");
+                        System.out.println("            |___________|");
+                        simon++;
                     }
-                    iscomando = true;
-                }
 
-            if (inpString.equals("cowsay") || inpString.equals("gelaber")) {
+                    System.out.println("	 ___________________");
+                    System.out.println("	|    ___________    |");
+                    System.out.println("	|   |           |   |");
+                    System.out.println("	|   |           |   |");
+                    System.out.println("	|   |           |   |");
+                    System.out.println("	|   |           |   |");
+                    System.out.println("	|   |           |   |");
+                    System.out.println("	|   |           |   |");
+                    System.out.println("	|   |           |   |");
+                    System.out.println("	|   |           |   |");
+                    System.out.println("	|   |___________|   |");
+                    System.out.println("	|___________________|");
+
+                    System.out.println("	 ___________________");
+                    System.out.println("	|    ___________    |");
+                    System.out.println("	|   |           |   |");
+                    System.out.println("	|   |           |   |");
+                    System.out.println("	|   |           |   |");
+                    System.out.println("	|   |           |   |");
+                    System.out.println("	|   |           |   |");
+                    System.out.println("	|   |           |   |");
+                    System.out.println("	|   |           |   |");
+                    System.out.println("	|   |           |   |");
+                    System.out.println("	|   |___________|   |");
+                    System.out.println("	|___________________|");
+
+                    String s1 = "\\";
+                    String s2 = "/";
+                    System.out.println(" __________                       __________");
+                    System.out.println("|           " + s1 + "                    " + s2 + "          |");
+                    System.out.println("|            " + s1 + "                  " + s2 + "           |");
+                    System.out.println("|       | " + s1 + "   " + s1 + "                " + s2 + "   " + s2 + "| 	    |");
+                    System.out.println("|       |  " + s1 + "   " + s1 + "              " + s2 + "   " + s2 + " | 	    |");
+                    System.out.println("|       |   " + s1 + "   " + s1 + "            " + s2 + "   " + s2 + "  |	    |");
+                    System.out.println("|       |    " + s1 + "   " + s1 + "          " + s2 + "   " + s2 + "   |	    |");
+                    System.out.println("|       |     " + s1 + "   " + s1 + "        " + s2 + "   " + s2 + "    |       |");
+                    System.out.println("|       |      " + s1 + "   " + s1 + "      " + s2 + "   " + s2 + "     |       |");
+                    System.out.println("|       |       " + s1 + "   " + s1 + "____" + s2 + "   " + s2 + "      |       |");
+                    System.out.println("|       |        " + s1 + "          " + s2 + "       |       |");
+                    System.out.println("|       |         " + s1 + "        " + s2 + "        |       |");
+                    System.out.println("|_______|          " + s1 + "______" + s2 + "         |_______|");
+
+                } else {
+                    System.out.println("Dann passen sie auf!");
+                }
+                iscomando = true;
+            }
+
+            if (inpString.equals("cowsay") || inpString.equals("gelaber") || inpString.equals("bottlesay")) {
                 String text = "";
                 String randstring = "";
-                int max = 5;
+                int max = 10;
                 int randomzahl, randold = 0, randold2 = 0;
-                for (int i = 0; i < 10; i++) {
+                for (int i = 0; i < 5; i++) {
                     randomzahl = (int) ((Math.random() * max) + 1);
                     while (randold == randomzahl || randold2 == randomzahl) {
                         randomzahl = (int) ((Math.random() * max) + 1);
                     }
-                    if (debugging)
-                    {
-                    System.out.println(randomzahl + " " + randold + " " + randold2);
+                    if (debugging) {
+                        System.out.println(randomzahl + " " + randold + " " + randold2);
+                    }
                     randold2 = randold;
                     randold = randomzahl;
-                    }
+
                     switch (randomzahl) {
                         case 1:
-                            randstring = "V3";
+                            randstring = "kommt ins V3";
                             break;
                         case 2:
-                            randstring = "Affe";
+                            randstring = "ein rasierter Affe";
                             break;
                         case 3:
-                            randstring = "rasiert";
+                            randstring = "wir schaffen";
                             break;
                         case 4:
                             randstring = "bier";
@@ -734,14 +736,30 @@ public class Main {
                         case 5:
                             randstring = "du hast";
                             break;
+                        case 6:
+                            randstring = "5 Kinder";
+                            break;
+                        case 7:
+                            randstring = "und";
+                            break;
+                        case 8:
+                            randstring = "18 flaschen bier";
+                            break;
+                        case 9:
+                            randstring = "das ist genau so";
+                            break;
+                        case 10:
+                            randstring = "in der apotheke rauchen";
+                            break;
+
                     }
                     text += randstring + " ";
                 }
 
-                /* TODO: monkeysay, bottlesay, ... */
+                /* TODO: monkeysay, ... */
 
 
-                if (inpString.equals("cowsay")) {
+                if (inpString.equals("cowsay") || inpString.equals("bottlesay")) {
                     int i;
                     String minus = "----";
                     String minus2 = "____";
@@ -752,11 +770,37 @@ public class Main {
                     System.out.println(minus2);
                     System.out.println("< " + text + " >");
                     System.out.println(minus);
-                    System.out.println("   \\    ^__^");
-                    System.out.println("    \\   (oo)\\_______");
-                    System.out.println("        (__)\\       )\\/\\");
-                    System.out.println("            ||----w |");
-                    System.out.println("            ||     ||");
+
+                    if (inpString.equals("cowsay")) {
+                        System.out.println("   \\    ^__^");
+                        System.out.println("    \\   (oo)\\_______");
+                        System.out.println("        (__)\\       )\\/\\");
+                        System.out.println("            ||----w |");
+                        System.out.println("            ||     ||");
+                    }
+                    if (inpString.equals("bottlesay")) {
+
+                    System.out.println("       \\      ____");
+                    System.out.println("        \\    |    |");
+                    System.out.println("         \\   |    |");
+                    System.out.println("          \\  |____|");
+                    System.out.println("             |    |");
+                    System.out.println("             (    )");
+                    System.out.println("             )    (");
+                    System.out.println("           .'      `.");
+                    System.out.println("          /          \\");
+                    System.out.println("         |------------|");
+                    System.out.println("         |JACK DANIELS|");
+                    System.out.println("         |    ----    |");
+                    System.out.println("         |   (No.7)   |");
+                    System.out.println("         |    ----    |");
+                    System.out.println("         | Tennessee  |");
+                    System.out.println("         |  WHISKEY   |");
+                    System.out.println("         |  40% Vol.  |");
+                    System.out.println("         |------------|");
+                    System.out.println("         |____________|dp");
+
+                    }
                 } else {
                     System.out.println(username + ": " + text);
                 }
@@ -787,26 +831,42 @@ public class Main {
             }
 
             //Start Pseudo Filesystem
-
-            if (inpString.substring(0, 3).equals("cd ")) {
-                String pathname = inpString.substring(3, inpString.length());
-                if (!pathname.substring(0, 1).equals("/")) {
-                    directory += "/" + pathname;
-                } else {
-                    if (pathname.equals("/home/" + username)) {
-                        directory = "~";
-                    } else {
-                        directory = pathname;
+            if (inpString.contains("cd")) {
+                try {
+                    if (inpString.substring(0, 3).equals("cd ")) {
+                        String pathname = inpString.substring(3, inpString.length());
+                        if (!pathname.substring(0, 1).equals("/")) {
+                            if (directory.equals("/")) {
+                                directory += pathname;
+                            } else {
+                                directory += "/" + pathname;
+                            }
+                        } else {
+                            if (pathname.equals("/home/" + username)) {
+                                directory = "~";
+                            } else {
+                                directory = pathname;
+                            }
+                        }
+                        //System.out.println(pathname);
+                        iscomando = true;
                     }
+                } catch (StringIndexOutOfBoundsException e) {
+                    System.out.println("Rasieren Sie einen Affen und benutzen danach cd <Pfad>");
                 }
-                System.out.println(pathname);
-                iscomando = true;
             }
+
 
             if (inpString.equals("ls")) {
                 String list = "";
                 if (directory.equals("/")) {
                     list += "boot   home   barnian";
+                }
+                if (directory.equals("~") || directory.equals("/home/" + username)) {
+                    list += "pointer.pptx";
+                }
+                if (directory.equals("/home")) {
+                    list += "barner   lowski   samed";
                 }
                 System.out.println(list);
                 iscomando = true;
