@@ -25,6 +25,9 @@ package com.enfs;
  * - ls
  * - cd
  * - quersumme
+ * Version 1.2:
+ * - cowsay Algorithmus optimiert
+ *
  * TODO: Befehlsliste aktualisieren
  */
 
@@ -352,6 +355,25 @@ public class Main {
                 System.out.println("public static void main(\nString args[\n])\n{\nScanner tastatur =\nnew Scanner(System\n.in);\n\n}");
                 iscomando = true;
             }
+
+
+
+            /* games
+             * Alle Spiele müssen nach dem Befehl games geschrieben werden.
+             */
+
+            if (inpString.equals("games") || inpString.equals("gamecenter")) {
+                System.out.print("Spiele:\nRaten (1)\nSnake (2)\n: ");
+                int spiel = input.nextInt();
+                if (spiel == 1) {
+                    inpString = "raten";
+                }
+                if (spiel == 2) {
+                    inpString = "snake";
+                }
+            }
+
+
 
             if (inpString.equals("raten")) {
                 System.out.println("Zahlenraten.\nErrate eine Zahl von 1-1000");
@@ -707,22 +729,34 @@ public class Main {
             if (inpString.equals("cowsay") || inpString.equals("gelaber") || inpString.equals("bottlesay")) {
                 String text = "";
                 String randstring = "";
-                int max = 10;
-                int randomzahl, randold = 0, randold2 = 0;
-                for (int i = 0; i < 5; i++) {
+                int max = 17;
+                int laenge = 19;
+                int linebreak = 4;
+                int randomzahl, randold = 0, randold2 = 0, randold3 = 0, randold4 = 0, randold5 = 0, randold6 = 0, randold7 = 0, randold8 = 0, randold9 = 0, randold10 = 0, woerter = 0;
+
+                //Mühle:
+                for (int i = 0; i < laenge; i++) {
                     randomzahl = (int) ((Math.random() * max) + 1);
-                    while (randold == randomzahl || randold2 == randomzahl) {
+                    while (randold == randomzahl || randold2 == randomzahl || randold3 == randomzahl || randold4 == randomzahl || randold5 == randomzahl || randold6 == randomzahl || randold7 == randomzahl || randold8 == randomzahl || randold9 == randomzahl || randold10 == randomzahl) {
                         randomzahl = (int) ((Math.random() * max) + 1);
                     }
                     if (debugging) {
-                        System.out.println(randomzahl + " " + randold + " " + randold2);
+                        System.out.println(randomzahl + " " + randold + " " + randold2 + " " + randold3 + " " + randold4 + " " + randold5 + " " + randold6 + " " + randold7 + " " + randold8 + " " + randold9 + " " + randold10);
                     }
+                    randold10 = randold9;
+                    randold9 = randold8;
+                    randold8 = randold7;
+                    randold7 = randold6;
+                    randold6 = randold5;
+                    randold5 = randold4;
+                    randold4 = randold3;
+                    randold3 = randold2;
                     randold2 = randold;
                     randold = randomzahl;
 
                     switch (randomzahl) {
                         case 1:
-                            randstring = "kommt ins V3";
+                            randstring = "komm ins V3";
                             break;
                         case 2:
                             randstring = "ein rasierter Affe";
@@ -751,9 +785,36 @@ public class Main {
                         case 10:
                             randstring = "in der apotheke rauchen";
                             break;
-
+                        case 11:
+                            randstring = "durch die Mühle lassen";
+                            break;
+                        case 12:
+                            randstring = "das kannst du";
+                            break;
+                        case 13:
+                            randstring = "da müssen wir Laufzeit optimieren";
+                            break;
+                        case 14:
+                            randstring = "teurer Briefbeschwerer";
+                            break;
+                        case 15:
+                            randstring = "flussdiagramm!";
+                            break;
+                        case 16:
+                            randstring = "erst auf dem Blatt debuggen";
+                            break;
+                        case 17:
+                            randstring = "dann in die Mühle eintippen";
+                            break;
                     }
-                    text += randstring + " ";
+                    woerter++;
+
+                    if (woerter > linebreak) {
+                        text += randstring + " >\n< ";
+                        woerter = 0;
+                    } else {
+                        text += randstring + " ";
+                    }
                 }
 
                 /* TODO: monkeysay, ... */
@@ -763,12 +824,13 @@ public class Main {
                     int i;
                     String minus = "----";
                     String minus2 = "____";
-                    for (i = 0; i < text.length(); i++) {
+                    double offset = 1.4;
+                    for (i = 0; i < text.length() * linebreak / laenge * offset; i++) {
                         minus += "-";
                         minus2 += "_";
                     }
                     System.out.println(minus2);
-                    System.out.println("< " + text + " >");
+                    System.out.println("< " + text + ">");
                     System.out.println(minus);
 
                     if (inpString.equals("cowsay")) {
