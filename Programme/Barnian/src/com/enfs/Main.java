@@ -374,6 +374,45 @@ public class Main {
             }
 
 
+            if (inpString.equals("affenspiel")) {
+                System.out.print("Gebe eine Start Zahl ein: ");
+                int left = input.nextInt();
+                int computer;
+                while (left > 0) {
+
+                    //Computerzahl generieren
+                    if (left % 2 == 0 && left != 4) {
+                        computer = 2;
+                    } else {
+                        computer = 1;
+                    }
+
+
+                    System.out.println("Rasierter Affe zieht: " + computer);
+                    left -= computer;
+                    System.out.println("Jetzt sind " + left + " übrig.");
+
+                    if (left <= 0) {
+                        System.out.println("Rasierter Affe gewinnt!");
+                        break;
+                    }
+                    System.out.print("Dein Zug, " + username + " (1 oder 2): ");
+                    int person = input.nextInt();
+
+                    while (person != 1 && person != 2) {
+                        System.out.println(person + " nicht erlaubt, wähle 1 oder 2.");
+                        person = input.nextInt();
+                    }
+                    left -= person;
+                    System.out.println("Jetzt sind " + left + " übrig.");
+
+                    if (left <= 0) {
+                        System.out.println(username + "hat gewonnen!");
+                        break;
+                    }
+                }
+            }
+
 
             if (inpString.equals("raten")) {
                 System.out.println("Zahlenraten.\nErrate eine Zahl von 1-1000");
