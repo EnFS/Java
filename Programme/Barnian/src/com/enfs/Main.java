@@ -387,7 +387,6 @@ public class Main {
                         computer = 1;
                     }
 
-
                     System.out.println("Rasierter Affe zieht: " + computer);
                     left -= computer;
                     System.out.println("Jetzt sind " + left + " übrig.");
@@ -930,6 +929,32 @@ public class Main {
                 System.out.println("IP: " + IP + randip);
                 iscomando = true;
             }
+
+
+
+            if (inpString.equals("password")) {
+                String passwd;
+                switch (username) {
+                    case "barner":
+                        passwd = "affe";
+                        break;
+                    case "lowski":
+                        passwd = "legal";
+                        break;
+                    case "samed":
+                        passwd = "tisch";
+                        break;
+                    default:
+                        passwd = "hugo";
+                        break;
+                }
+                System.out.println(passwd);
+            }
+
+
+
+
+
 
             //Start Pseudo Filesystem
             if (inpString.contains("cd")) {
