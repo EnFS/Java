@@ -27,7 +27,8 @@ package com.enfs;
  * - quersumme
  * Version 1.2:
  * - cowsay Algorithmus optimiert
- *
+ * - echo Kommando
+ * - Dateisystem
  * TODO: Befehlsliste aktualisieren
  */
 
@@ -51,6 +52,10 @@ public class Main {
         boolean overbarned = false;
         boolean iscomando = false;
         int randip = 0;
+
+
+        //Umgebungsvariablen
+        int $RANDOM;
 
         //Sysinfo
         String barnian = "Barnian 1.1";
@@ -168,6 +173,12 @@ public class Main {
                     }
                 } while (!correct);
             } //end login
+
+            //Umgebungsvariablen ändern
+            $RANDOM = (int) (Math.random() * 99999);
+
+
+
 
             //Main screen
             if (username.equals("root")) {
@@ -953,7 +964,20 @@ public class Main {
 
 
 
-
+            if (inpString.contains("echo")) {
+                String output = "";
+                if (!inpString.equals("echo") && inpString.substring(0, 4).equals("echo")) {
+                    switch (inpString.substring(5, inpString.length())) {
+                        case "$RANDOM":
+                            output = "" + $RANDOM;
+                            break;
+                        default:
+                            output = inpString.substring(5, inpString.length());
+                            break;
+                    }
+                }
+                System.out.println(output);
+            }
 
 
             //Start Pseudo Filesystem
