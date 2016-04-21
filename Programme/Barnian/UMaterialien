@@ -1,0 +1,88 @@
+package test;
+
+import static java.lang.Thread.sleep;
+import java.util.Scanner;
+
+public class test {
+
+    public static void main(String[] args) throws InterruptedException {
+
+        Scanner tastatur = new Scanner(System.in);
+        String website = "www.umaterialien.de";
+        
+        System.out.println("._______________________________________________________________________________.");
+        System.out.println("|Fast, Faster, FireBarn                                                         |");
+        System.out.println("|_______________________________________________________________________________|");
+        System.out.println("| <- i|" + website + "                                                      |");
+        System.out.println("|_______________________________________________________________________________|");
+        System.out.println("||Projekt Effektiver Arbeiten                                                   |");
+        System.out.println("|                                                                               |");
+        System.out.println("|Alle EDV-Lehrer, die das gleiche Fach unterrichten, erarbeiten Unterrichts-    |");
+        System.out.println("|material für das gleiche Sachgebiet. Das ist Ressourcenvergeudung !            |");
+        System.out.println("|Sinnvoll wäre es, dieses Material detailliert, ausführlich und selbstsprechend |");
+        System.out.println("|für interessierte, lernwillige Autodidakten zugänglich zu machen               |");
+        System.out.println("|Das hat folgende Vorteile:                                                     |");
+        System.out.println("|1) Daran Interessierte können sich damit auseinandersetzen (Verbesserungs-     |");
+        System.out.println("|vorschläge machen, auf Fehler hinweisen, neue Ideen bringen, usw.)             |");
+        System.out.println("|und damit helfen, das bereitgestellte Unterrichtsmaterial zu verbessern.       |");
+        System.out.println("|2) Die Einarbeitsungs- und Vorbereitungszeit eines EDV-Unterrichtenden         |");
+        System.out.println("|in ein neues Fachgebiet wird durch die Nutzung dieses bereitgestellten         |");
+        System.out.println("|Lernmaterials erheblich kürzer (das Rad muß nicht jedesmal neu erfunden werden.|");
+        System.out.println("|Diese Person könnte deshalb dann in der eingesparten Zeit                      |");
+        System.out.println("|selbst Unterrichtsmaterial aufarbeiten und zur Verfügung stellen...            |");
+        System.out.println("|Unterstützung des Projekts                                                     |");
+        System.out.println("|                                                                               |");
+        System.out.println("|Da ich nur begrenzte Zeit und Fähigkeiten habe, suche ich                      |");
+        System.out.println("|noch Projektunterstützer.                                                      |");
+        System.out.println("|Jeder, der dieses Projekt unterstützen will, kann dies tun. Voraussetzung ist: |");
+        System.out.println("|1) Das von ihm zur Verfügung gestellte Unterrichts- bzw. Lernmaterialien muß   |");
+        System.out.println("|detailliert und ausführlichst ausgearbeitet werden.                            |");
+        System.out.println("|2) Der Projektunterstützer muß diese Materialien auf seiner                    |");
+        System.out.println("|Homepage zum Download                                                          |");
+        System.out.println("|anbieten, Links auf alle anderen                                               |");
+        System.out.println("|Projektunterstützer setzen und mich durch eine Email benachrichtigen.          |");
+        System.out.println("|3) Wer seine Unterrichtsmaterialien anbieten will und mit 1) und 2) nicht      |");
+        System.out.println("|einverstanden ist, kann sich trotzdem                                          |");
+        System.out.println("|auf die unten angegebene Linkliste setzen lassen...                            |");
+        System.out.println("|                                                                               |");
+        System.out.println("|                                                                               |");
+        System.out.println("|Copyright                                                                      |");
+        System.out.println("|                                                                               |");
+        System.out.println("|Jeder (ob Projektunterstützer oder nicht) darf diese Unterlagen zur Schulung   |");
+        System.out.println("|oder zum Privatstudium benutzen.                                               |");
+        System.out.println("|Jeder darf dazu beliebig viel Kopien für sich und andere                       |");
+        System.out.println("|Kursteilnehmer anfertigen.                                                     |");
+        System.out.println("|Die Unterlagen dürfen aber nicht                                               |");
+        System.out.println("|weiterverkauft werden, weder in elektronischer, noch in gedruckter Form.       |");
+        System.out.println("|Ich will ausschliessen, dass ein anderer sich als Urheber dieser               |");
+        System.out.println("|Lernmittel ausgibt und ich in diesem Falle für die Benutzung meiner eigenen    |");
+        System.out.println("|Ausarbeitungen dann auch noch zahlen muss.                                     |");
+        System.out.println("|Die Unterlagen dürfen ausser von mir nicht dem Internet                        |");
+        System.out.println("|zugänglich gemacht werden,                                                     |");
+        System.out.println("|auch nicht teilweise. Damit soll verhindert werden,                            |");
+        System.out.println("|dass an verschiedenen Orten verschiedene Versionen auftauchen.                 |");
+        System.out.println("|Eine Bitte:                                                                    |");
+        System.out.println("|Falls sich Fehler in den Lernmitteln befinden, bitte ich,                      |");
+        System.out.println("|mich darauf hinzuweisen.                                                       |");
+        System.out.println("|Für Verbesserungsvorschläge, neue Ideen, usw. bin ich dankbar.                 |");
+        System.out.println("|Meine Email-Adresse:                                                           |");
+        System.out.println("|carlox@web.de                                                                  |");
+        System.out.println("|IMPRESSUM                                                                      |");
+        System.out.println("|Die hier zur Verfügung gestellten Materialien wurden mit MS-Office erstellt.   |");
+        System.out.println("|Meine Lernmaterialien                                                          |");
+        System.out.println("|                                                                               |");
+        System.out.println("|                                                                               |");
+        System.out.println("|NEU !!!! Linkliste zu anderen Unterrichtsmaterial produzierenden               |");
+        System.out.println("|                                                                               |");
+        System.out.println("|                                                                               |");
+        System.out.println("|Letzte Änderung dieser Website:  26.3.2016                                     |");
+        System.out.println("|                                                                               |");
+        System.out.println("|Zähler:                                                                        |");
+        System.out.println("|Gerade Online: 1                                                               |");
+        System.out.println("|Besucher Heute: 10                                                             |");
+        System.out.println("|Vortag: 28                                                                     |");
+        System.out.println("|Tagesrekord: 498                                                               |");
+        System.out.println("|Gesamt Besucher: 49116                                                         |");
+        System.out.println("________________________________________________________________________________");
+    }
+}
