@@ -29,10 +29,9 @@ package com.enfs;
  * - cowsay Algorithmus optimiert
  * - echo Kommando
  * - Dateisystem
+ * - Firebarn
  * TODO: Befehlsliste aktualisieren
  */
-
-
 import java.awt.Point;
 import java.util.Scanner;
 
@@ -53,9 +52,8 @@ public class Main {
         boolean iscomando = false;
         int randip = 0;
 
-
         //Umgebungsvariablen
-        int $RANDOM;
+        int $RANDOM = 0;
 
         //Sysinfo
         String barnian = "Barnian 1.1";
@@ -63,10 +61,8 @@ public class Main {
         //Standard home directory: ~
         String directory = "~";
 
-
         //Debugging aktivieren.
         boolean debugging = true;
-
 
         while (!inpString.equals("poweroff")) {
 
@@ -177,9 +173,6 @@ public class Main {
             //Umgebungsvariablen ändern
             $RANDOM = (int) (Math.random() * 99999);
 
-
-
-
             //Main screen
             if (username.equals("root")) {
                 System.out.print(username + "@Barnian: " + directory + " # ");
@@ -189,9 +182,7 @@ public class Main {
 
             inpString = input.nextLine();
 
-
             //Funktionen
-
             //switch drunkmode on and off
             if (inpString.equals("drunk")) {
                 if (drunkmode) {
@@ -268,15 +259,15 @@ public class Main {
                 if (drunkmode) {
                     System.out.println("Wenn ihr googeln wollt, könnt ihr das auch beim V3 machen. Dann aber auf Papier!");
                 } else {
-                    System.out.println("Wenn ihr so unruhig seid,\nkönnt ihr auch ein kostenloses V3 Ticket bekommen.\n" +
-                            "Danach seid ihr nicht mehr so zappelig, da das V3 beruhigt.\n");
+                    System.out.println("Wenn ihr so unruhig seid,\nkönnt ihr auch ein kostenloses V3 Ticket bekommen.\n"
+                            + "Danach seid ihr nicht mehr so zappelig, da das V3 beruhigt.\n");
                 }
                 iscomando = true;
             }
 
             if (inpString.equals("flussdiagramm")) {
-                System.out.println("Kein Flussdiagramm zu zeichnen ist genauso,\nwie nen Affen zu rasieren," +
-                        " den mit Niveacreme einzucremen,\nin einen Anzug zu stecken und vor die Tastatur zu setzen.\n");
+                System.out.println("Kein Flussdiagramm zu zeichnen ist genauso,\nwie nen Affen zu rasieren,"
+                        + " den mit Niveacreme einzucremen,\nin einen Anzug zu stecken und vor die Tastatur zu setzen.\n");
                 iscomando = true;
             }
             //barner
@@ -367,12 +358,9 @@ public class Main {
                 iscomando = true;
             }
 
-
-
             /* games
              * Alle Spiele müssen nach dem Befehl games geschrieben werden.
              */
-
             if (inpString.equals("games") || inpString.equals("gamecenter")) {
                 System.out.print("Spiele:\nRaten (1)\nSnake (2)\n: ");
                 int spiel = input.nextInt();
@@ -383,7 +371,6 @@ public class Main {
                     inpString = "snake";
                 }
             }
-
 
             if (inpString.equals("affenspiel")) {
                 System.out.print("Gebe eine Start Zahl ein: ");
@@ -422,7 +409,6 @@ public class Main {
                     }
                 }
             }
-
 
             if (inpString.equals("raten")) {
                 System.out.println("Zahlenraten.\nErrate eine Zahl von 1-1000");
@@ -467,47 +453,46 @@ public class Main {
                 boolean rich4 = false;
                 boolean rich5 = false;
 
-
                 while (true) {
                     // Raster mit Figuren zeichnen
 
                     for (int y = 0; y < 10; y++) {
                         for (int x = 0; x < 40; x++) {
                             Point p = new Point(x, y);
-                            if (playerPosition.equals(p))
+                            if (playerPosition.equals(p)) {
                                 System.out.print('&');
-                            else if (snakePosition.equals(p))
+                            } else if (snakePosition.equals(p)) {
                                 System.out.print('S');
-                            else if (snakePosition2.equals(p))
+                            } else if (snakePosition2.equals(p)) {
                                 System.out.print('x');
-                            else if (snakePosition3.equals(p))
+                            } else if (snakePosition3.equals(p)) {
                                 System.out.print('o');
-                            else if (snakePosition4.equals(p))
+                            } else if (snakePosition4.equals(p)) {
                                 System.out.print('x');
-                            else if (snakePosition5.equals(p))
+                            } else if (snakePosition5.equals(p)) {
                                 System.out.print('o');
-                            else if (snakePosition6.equals(p))
+                            } else if (snakePosition6.equals(p)) {
                                 System.out.print('x');
-                            else if (goldPosition1.equals(p))
+                            } else if (goldPosition1.equals(p)) {
                                 System.out.print('$');
-                            else if (goldPosition2.equals(p))
+                            } else if (goldPosition2.equals(p)) {
                                 System.out.print('$');
-                            else if (goldPosition3.equals(p))
+                            } else if (goldPosition3.equals(p)) {
                                 System.out.print('$');
-                            else if (goldPosition4.equals(p))
+                            } else if (goldPosition4.equals(p)) {
                                 System.out.print('$');
-                            else if (goldPosition5.equals(p))
+                            } else if (goldPosition5.equals(p)) {
                                 System.out.print('$');
-                            else if (doorPosition.equals(p))
+                            } else if (doorPosition.equals(p)) {
                                 System.out.print('#');
-                            else System.out.print('.');
+                            } else {
+                                System.out.print('.');
+                            }
                         }
                         System.out.println();
                     }
 
                     // Status feststellen
-
-
                     if (rich1 && rich2 && rich3 && rich4 && rich5 && playerPosition.equals(doorPosition)) {
                         System.out.println("Gewonnen!");
                         break;
@@ -606,98 +591,101 @@ public class Main {
                     }
 
                     // Schlange bewegt sich in Richtung Spieler
-
-                    if (playerPosition.x < snakePosition.x)
+                    if (playerPosition.x < snakePosition.x) {
                         snakePosition.x--;
-                    else if (playerPosition.x > snakePosition.x)
+                    } else if (playerPosition.x > snakePosition.x) {
                         snakePosition.x++;
-                    if (playerPosition.y < snakePosition.y)
+                    }
+                    if (playerPosition.y < snakePosition.y) {
                         snakePosition.y--;
-                    else if (playerPosition.y > snakePosition.y)
+                    } else if (playerPosition.y > snakePosition.y) {
                         snakePosition.y++;
+                    }
 
                     //Schlangezweiterteil2
-
-                    if (snakePosition.x < snakePosition2.x)
+                    if (snakePosition.x < snakePosition2.x) {
                         snakePosition2.x--;
+                    }
 
-
-                    if (snakePosition.x > snakePosition2.x)
+                    if (snakePosition.x > snakePosition2.x) {
                         snakePosition2.x++;
+                    }
 
-
-                    if (snakePosition.y < snakePosition2.y)
+                    if (snakePosition.y < snakePosition2.y) {
                         snakePosition2.y--;
+                    }
 
-
-                    if (snakePosition.y > snakePosition2.y)
+                    if (snakePosition.y > snakePosition2.y) {
                         snakePosition2.y++;
-
+                    }
 
                     //schlange3
-
-                    if (snakePosition2.x < snakePosition3.x)
+                    if (snakePosition2.x < snakePosition3.x) {
                         snakePosition3.x--;
+                    }
 
-
-                    if (snakePosition2.x > snakePosition3.x)
+                    if (snakePosition2.x > snakePosition3.x) {
                         snakePosition3.x++;
+                    }
 
-
-                    if (snakePosition2.y < snakePosition3.y)
+                    if (snakePosition2.y < snakePosition3.y) {
                         snakePosition3.y--;
+                    }
 
-
-                    if (snakePosition2.y > snakePosition3.y)
+                    if (snakePosition2.y > snakePosition3.y) {
                         snakePosition3.y++;
+                    }
 
                     //schlange4
-                    if (snakePosition3.x < snakePosition4.x)
+                    if (snakePosition3.x < snakePosition4.x) {
                         snakePosition4.x--;
+                    }
 
-
-                    if (snakePosition3.x > snakePosition4.x)
+                    if (snakePosition3.x > snakePosition4.x) {
                         snakePosition4.x++;
+                    }
 
-
-                    if (snakePosition3.y < snakePosition4.y)
+                    if (snakePosition3.y < snakePosition4.y) {
                         snakePosition4.y--;
+                    }
 
-
-                    if (snakePosition3.y > snakePosition4.y)
+                    if (snakePosition3.y > snakePosition4.y) {
                         snakePosition4.y++;
+                    }
 
                     //Schlange5
-                    if (snakePosition4.x < snakePosition5.x)
+                    if (snakePosition4.x < snakePosition5.x) {
                         snakePosition5.x--;
+                    }
 
-
-                    if (snakePosition4.x > snakePosition5.x)
+                    if (snakePosition4.x > snakePosition5.x) {
                         snakePosition5.x++;
+                    }
 
-
-                    if (snakePosition4.y < snakePosition5.y)
+                    if (snakePosition4.y < snakePosition5.y) {
                         snakePosition5.y--;
+                    }
 
-
-                    if (snakePosition4.y > snakePosition5.y)
+                    if (snakePosition4.y > snakePosition5.y) {
                         snakePosition5.y++;
+                    }
 
                     //schlange6
-                    if (snakePosition5.x < snakePosition6.x)
+                    if (snakePosition5.x < snakePosition6.x) {
                         snakePosition6.x--;
+                    }
 
-
-                    if (snakePosition5.x > snakePosition6.x)
+                    if (snakePosition5.x > snakePosition6.x) {
                         snakePosition6.x++;
+                    }
 
-
-                    if (snakePosition5.y < snakePosition6.y)
+                    if (snakePosition5.y < snakePosition6.y) {
                         snakePosition6.y--;
+                    }
 
-
-                    if (snakePosition5.y > snakePosition6.y)
+                    if (snakePosition5.y > snakePosition6.y) {
                         snakePosition6.y++;
+                    }
                 }
                 iscomando = true;
             }
@@ -867,8 +855,6 @@ public class Main {
                 }
 
                 /* TODO: monkeysay, ... */
-
-
                 if (inpString.equals("cowsay") || inpString.equals("bottlesay")) {
                     int i;
                     String minus = "----";
@@ -891,25 +877,25 @@ public class Main {
                     }
                     if (inpString.equals("bottlesay")) {
 
-                    System.out.println("       \\      ____");
-                    System.out.println("        \\    |    |");
-                    System.out.println("         \\   |    |");
-                    System.out.println("          \\  |____|");
-                    System.out.println("             |    |");
-                    System.out.println("             (    )");
-                    System.out.println("             )    (");
-                    System.out.println("           .'      `.");
-                    System.out.println("          /          \\");
-                    System.out.println("         |------------|");
-                    System.out.println("         |JACK DANIELS|");
-                    System.out.println("         |    ----    |");
-                    System.out.println("         |   (No.7)   |");
-                    System.out.println("         |    ----    |");
-                    System.out.println("         | Tennessee  |");
-                    System.out.println("         |  WHISKEY   |");
-                    System.out.println("         |  40% Vol.  |");
-                    System.out.println("         |------------|");
-                    System.out.println("         |____________|dp");
+                        System.out.println("       \\      ____");
+                        System.out.println("        \\    |    |");
+                        System.out.println("         \\   |    |");
+                        System.out.println("          \\  |____|");
+                        System.out.println("             |    |");
+                        System.out.println("             (    )");
+                        System.out.println("             )    (");
+                        System.out.println("           .'      `.");
+                        System.out.println("          /          \\");
+                        System.out.println("         |------------|");
+                        System.out.println("         |JACK DANIELS|");
+                        System.out.println("         |    ----    |");
+                        System.out.println("         |   (No.7)   |");
+                        System.out.println("         |    ----    |");
+                        System.out.println("         | Tennessee  |");
+                        System.out.println("         |  WHISKEY   |");
+                        System.out.println("         |  40% Vol.  |");
+                        System.out.println("         |------------|");
+                        System.out.println("         |____________|dp");
 
                     }
                 } else {
@@ -917,7 +903,6 @@ public class Main {
                 }
                 iscomando = true;
             }
-
 
             if (inpString.equals("quersumme")) {
                 int zahl, quersumme = 0, rest;
@@ -941,8 +926,6 @@ public class Main {
                 iscomando = true;
             }
 
-
-
             if (inpString.equals("password")) {
                 String passwd;
                 switch (username) {
@@ -962,104 +945,217 @@ public class Main {
                 System.out.println(passwd);
             }
 
+            if (inpString.equals("firebarn")) {
+                String website = "www.umaterialien.de";
+                String scrollen;
+                int laufen = 1;
 
-
-            if (inpString.contains("echo")) {
-                String output = "";
-                if (!inpString.equals("echo") && inpString.substring(0, 4).equals("echo")) {
-                    switch (inpString.substring(5, inpString.length())) {
-                        case "$RANDOM":
-                            output = "" + $RANDOM;
+                while (laufen == 1 || laufen == 0) {
+                    while (laufen == 1) {
+                        System.out.println("._______________________________________________________________________________.");
+                        System.out.println("|Fast, Faster, FireBarn                                                         |");
+                        System.out.println("|_______________________________________________________________________________|");
+                        System.out.println("| <- i|" + website + "                                                      |");
+                        System.out.println("|_______________________________________________________________________________|");
+                        System.out.println("||Projekt Effektiver Arbeiten                                                   |");
+                        System.out.println("|                                                                               |");
+                        System.out.println("|Alle EDV-Lehrer, die das gleiche Fach unterrichten, erarbeiten Unterrichts-    |");
+                        System.out.println("|material für das gleiche Sachgebiet. Das ist Ressourcenvergeudung !            |");
+                        System.out.println("|Sinnvoll wäre es, dieses Material detailliert, ausführlich und selbstsprechend |");
+                        System.out.println("|für interessierte, lernwillige Autodidakten zugänglich zu machen               |");
+                        System.out.println("|Das hat folgende Vorteile:                                                     |");
+                        System.out.println("|1) Daran Interessierte können sich damit auseinandersetzen (Verbesserungs-     |");
+                        System.out.println("|vorschläge machen, auf Fehler hinweisen, neue Ideen bringen, usw.)             |");
+                        System.out.println("|und damit helfen, das bereitgestellte Unterrichtsmaterial zu verbessern.       |");
+                        System.out.println("|2) Die Einarbeitsungs- und Vorbereitungszeit eines EDV-Unterrichtenden         |");
+                        System.out.println("|in ein neues Fachgebiet wird durch die Nutzung dieses bereitgestellten         |");
+                        System.out.println("|Lernmaterials erheblich kürzer (das Rad muß nicht jedesmal neu erfunden werden.|");
+                        System.out.println("|Diese Person könnte deshalb dann in der eingesparten Zeit                      |");
+                        System.out.println("|selbst Unterrichtsmaterial aufarbeiten und zur Verfügung stellen...            |");
+                        System.out.println("|Unterstützung des Projekts                                                     |");
+                        System.out.println("|                                                                               |");
+                        System.out.println("|Da ich nur begrenzte Zeit und Fähigkeiten habe, suche ich                      |");
+                        System.out.println("|noch Projektunterstützer.                                                      |");
+                        System.out.println("|Jeder, der dieses Projekt unterstützen will, kann dies tun. Voraussetzung ist: |");
+                        System.out.println("|1) Das von ihm zur Verfügung gestellte Unterrichts- bzw. Lernmaterialien muß   |");
+                        System.out.println("|detailliert und ausführlichst ausgearbeitet werden.                            |");
+                        System.out.println("|2) Der Projektunterstützer muß diese Materialien auf seiner                    |");
+                        System.out.println("|Homepage zum Download                                                          |");
+                        System.out.println("|anbieten, Links auf alle anderen                                               |");
+                        System.out.println("|Projektunterstützer setzen und mich durch eine Email benachrichtigen.          |");
+                        System.out.println("|3) Wer seine Unterrichtsmaterialien anbieten will und mit 1) und 2) nicht      |");
+                        System.out.println("|einverstanden ist, kann sich trotzdem                                          |");
+                        System.out.println("________________________________________________________________________________");
+                        System.out.println("zum Scrollen 'runder rutschen' ein tippen.");
+                        System.out.println("Für verlassen 'exit'");
+                        scrollen = input.nextLine();
+                        if (scrollen.equals("runder rutschen")){
+                            laufen = 0;
                             break;
-                        default:
-                            output = inpString.substring(5, inpString.length());
+                        } 
+                        
+                        if (scrollen.equals("exit"))  {
+                            laufen = 1;
                             break;
-                    }
-                }
-                System.out.println(output);
-            }
-
-
-            //Start Pseudo Filesystem
-            if (inpString.contains("cd")) {
-                try {
-                    if (inpString.substring(0, 3).equals("cd ")) {
-                        String pathname = inpString.substring(3, inpString.length());
-                        if (!pathname.substring(0, 1).equals("/")) {
-                            if (directory.equals("/")) {
-                                directory += pathname;
-                            } else {
-                                directory += "/" + pathname;
-                            }
-                        } else {
-                            if (pathname.equals("/home/" + username)) {
-                                directory = "~";
-                            } else {
-                                directory = pathname;
-                            }
                         }
-                        //System.out.println(pathname);
-                        iscomando = true;
                     }
-                } catch (StringIndexOutOfBoundsException e) {
-                    System.out.println("Rasieren Sie einen Affen und benutzen danach cd <Pfad>");
+                    
+
+                    while (laufen == 0) {
+                        System.out.println("._______________________________________________________________________________.");
+                        System.out.println("|Fast, Faster, FireBarn                                                         |");
+                        System.out.println("|_______________________________________________________________________________|");
+                        System.out.println("| <- i|" + website + "                                                      |");
+                        System.out.println("|_______________________________________________________________________________|");
+                        System.out.println("|auf die unten angegebene Linkliste setzen lassen...                            |");
+                        System.out.println("|                                                                               |");
+                        System.out.println("|                                                                               |");
+                        System.out.println("|Copyright                                                                      |");
+                        System.out.println("|                                                                               |");
+                        System.out.println("|Jeder (ob Projektunterstützer oder nicht) darf diese Unterlagen zur Schulung   |");
+                        System.out.println("|oder zum Privatstudium benutzen.                                               |");
+                        System.out.println("|Jeder darf dazu beliebig viel Kopien für sich und andere                       |");
+                        System.out.println("|Kursteilnehmer anfertigen.                                                     |");
+                        System.out.println("|Die Unterlagen dürfen aber nicht                                               |");
+                        System.out.println("|weiterverkauft werden, weder in elektronischer, noch in gedruckter Form.       |");
+                        System.out.println("|Ich will ausschliessen, dass ein anderer sich als Urheber dieser               |");
+                        System.out.println("|Lernmittel ausgibt und ich in diesem Falle für die Benutzung meiner eigenen    |");
+                        System.out.println("|Ausarbeitungen dann auch noch zahlen muss.                                     |");
+                        System.out.println("|Die Unterlagen dürfen ausser von mir nicht dem Internet                        |");
+                        System.out.println("|zugänglich gemacht werden,                                                     |");
+                        System.out.println("|auch nicht teilweise. Damit soll verhindert werden,                            |");
+                        System.out.println("|dass an verschiedenen Orten verschiedene Versionen auftauchen.                 |");
+                        System.out.println("|Eine Bitte:                                                                    |");
+                        System.out.println("|Falls sich Fehler in den Lernmitteln befinden, bitte ich,                      |");
+                        System.out.println("|mich darauf hinzuweisen.                                                       |");
+                        System.out.println("|Für Verbesserungsvorschläge, neue Ideen, usw. bin ich dankbar.                 |");
+                        System.out.println("|Meine Email-Adresse:                                                           |");
+                        System.out.println("|carlox@web.de                                                                  |");
+                        System.out.println("|IMPRESSUM                                                                      |");
+                        System.out.println("|Die hier zur Verfügung gestellten Materialien wurden mit MS-Office erstellt.   |");
+                        System.out.println("|Meine Lernmaterialien                                                          |");
+                        System.out.println("|                                                                               |");
+                        System.out.println("|                                                                               |");
+                        System.out.println("|NEU !!!! Linkliste zu anderen Unterrichtsmaterial produzierenden               |");
+                        System.out.println("|                                                                               |");
+                        System.out.println("|                                                                               |");
+                        System.out.println("|Letzte Änderung dieser Website:  26.3.2016                                     |");
+                        System.out.println("|                                                                               |");
+                        System.out.println("|Zähler:                                                                        |");
+                        System.out.println("|Gerade Online: 1                                                               |");
+                        System.out.println("|Besucher Heute: 10                                                             |");
+                        System.out.println("|Vortag: 28                                                                     |");
+                        System.out.println("|Tagesrekord: 498                                                               |");
+                        System.out.println("|Gesamt Besucher: 49116                                                         |");
+                        System.out.println("________________________________________________________________________________");
+                        System.out.println("zum Scrollen 'rauf rutschen' ein tippen.");
+                        System.out.println("Für verlassen 'exit'");
+                        scrollen = input.nextLine();
+                        if (scrollen.equals("rauf rutschen")){
+                            laufen = 1;
+                            
+                        } 
+                        
+                        if (scrollen.equals("exit"))  {
+                            laufen = 1;
+                            break;
+                        }
+                    }
+                    //break;
                 }
-            }
-
-
-            if (inpString.equals("ls")) {
-                String list = "";
-                if (directory.equals("/")) {
-                    list += "boot   home   barnian";
-                }
-                if (directory.equals("~") || directory.equals("/home/" + username)) {
-                    list += "pointer.pptx";
-                }
-                if (directory.equals("/home")) {
-                    list += "barner   lowski   samed";
-                }
-                System.out.println(list);
-                iscomando = true;
-            }
-
-
-            //End Pseudo Filesystem
-
-
-            //Empty Inputstring
-            if (inpString.isEmpty() || !iscomando) {
-                if (drunkmode) {
-                    int zufall = 10;
-                    zufall = (int) (Math.random() * 5);
-                    //Zufalls Spruch leere eingabe Drunkmode
-                    if (zufall == 1) {
-                        System.out.println("Was soll deeees?");
-                    }
-                    if (zufall == 2) {
-                        System.out.println("Ohne Ausgabe nur ein Briefbeschwähereeeeeer");
-                    }
-                    if (zufall == 3) {
-                        System.out.println("ruhe sonst v3");
-                    }
-                    if (zufall == 4) {
-                        System.out.println("Da hat wohl jemand in der Apotheke Gefrühstückt");
-                    }
-                    if (zufall == 0) {
-                        System.out.println("Was machen sie da dddeeeessss sieht nicht nach Java aus");
-                    }
-                } else {
-                    if (emptycounter > 2) {
-                        System.out.println("Gleich gibt's V3");
-                    }
-                    if (emptycounter > 6) {
-                        System.out.println("Nach V3 kommt der K2 Berg");
-                        emptycounter = 0;
-                    }
-                    emptycounter++;
-                }
-                iscomando = false;
             }
         }
 
+        if (inpString.contains("echo")) {
+            String output = "";
+            if (!inpString.equals("echo") && inpString.substring(0, 4).equals("echo")) {
+                switch (inpString.substring(5, inpString.length())) {
+                    case "$RANDOM":
+                        output = "" + $RANDOM;
+                        break;
+                    default:
+                        output = inpString.substring(5, inpString.length());
+                        break;
+                }
+            }
+            System.out.println(output);
+        }
+
+        //Start Pseudo Filesystem
+        if (inpString.contains("cd")) {
+            try {
+                if (inpString.substring(0, 3).equals("cd ")) {
+                    String pathname = inpString.substring(3, inpString.length());
+                    if (!pathname.substring(0, 1).equals("/")) {
+                        if (directory.equals("/")) {
+                            directory += pathname;
+                        } else {
+                            directory += "/" + pathname;
+                        }
+                    } else {
+                        if (pathname.equals("/home/" + username)) {
+                            directory = "~";
+                        } else {
+                            directory = pathname;
+                        }
+                    }
+                    //System.out.println(pathname);
+                    iscomando = true;
+                }
+            } catch (StringIndexOutOfBoundsException e) {
+                System.out.println("Rasieren Sie einen Affen und benutzen danach cd <Pfad>");
+            }
+        }
+
+        if (inpString.equals("ls")) {
+            String list = "";
+            if (directory.equals("/")) {
+                list += "boot   home   barnian";
+            }
+            if (directory.equals("~") || directory.equals("/home/" + username)) {
+                list += "pointer.pptx";
+            }
+            if (directory.equals("/home")) {
+                list += "barner   lowski   samed";
+            }
+            System.out.println(list);
+            iscomando = true;
+        }
+
+        //End Pseudo Filesystem
+        //Empty Inputstring
+        if (inpString.isEmpty() || !iscomando) {
+            if (drunkmode) {
+                int zufall = 10;
+                zufall = (int) (Math.random() * 5);
+                //Zufalls Spruch leere eingabe Drunkmode
+                if (zufall == 1) {
+                    System.out.println("Was soll deeees?");
+                }
+                if (zufall == 2) {
+                    System.out.println("Ohne Ausgabe nur ein Briefbeschwähereeeeeer");
+                }
+                if (zufall == 3) {
+                    System.out.println("ruhe sonst v3");
+                }
+                if (zufall == 4) {
+                    System.out.println("Da hat wohl jemand in der Apotheke Gefrühstückt");
+                }
+                if (zufall == 0) {
+                    System.out.println("Was machen sie da dddeeeessss sieht nicht nach Java aus");
+                }
+            } else {
+                if (emptycounter > 2) {
+                    System.out.println("Gleich gibt's V3");
+                }
+                if (emptycounter > 6) {
+                    System.out.println("Nach V3 kommt der K2 Berg");
+                    emptycounter = 0;
+                }
+                emptycounter++;
+            }
+            iscomando = false;
+        }
     }
+
 }
