@@ -32,6 +32,10 @@ package com.enfs;
  * - Firebarn
  * TODO: Befehlsliste aktualisieren
  */
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 import java.awt.Point;
 import java.util.Scanner;
 
@@ -945,6 +949,7 @@ public class Main {
                 System.out.println(passwd);
             }
 
+<<<<<<< Updated upstream
             if (inpString.equals("firebarn")) {
                 String website = "www.umaterialien.de";
                 String scrollen;
@@ -991,6 +996,148 @@ public class Main {
                         scrollen = input.nextLine();
                         if (scrollen.equals("runder rutschen")){
                             laufen = 0;
+=======
+            if (inpString.contains("firebarn")) {
+                String parseargs;
+                String website = "www.umaterialien.de";
+                if (!inpString.equals("firebarn") && inpString.substring(0, "firebarn".length()).equals("firebarn")) {
+                    parseargs = inpString.substring("firebarn".length() + 1, inpString.length());
+                    System.out.println("Test " + parseargs);
+                    website = parseargs;
+                }
+
+                String scrollen = "";
+                int laufen = 1;
+                boolean exit = false;
+                while (!exit) {
+                    switch (laufen) {
+                        case 0:
+                            System.out.println("._______________________________________________________________________________.");
+                            System.out.println("|Fast, Faster, FireBarn                                                         |");
+                            System.out.println("|_______________________________________________________________________________|");
+                            System.out.println("| <- i|" + website + "                                                      |");
+                            System.out.println("|_______________________________________________________________________________|");
+                            System.out.println("|auf die unten angegebene Linkliste setzen lassen...                            |");
+                            System.out.println("|                                                                               |");
+                            System.out.println("|                                                                               |");
+                            System.out.println("|Copyright                                                                      |");
+                            System.out.println("|                                                                               |");
+                            System.out.println("|Jeder (ob Projektunterstützer oder nicht) darf diese Unterlagen zur Schulung   |");
+                            System.out.println("|oder zum Privatstudium benutzen.                                               |");
+                            System.out.println("|Jeder darf dazu beliebig viel Kopien für sich und andere                       |");
+                            System.out.println("|Kursteilnehmer anfertigen.                                                     |");
+                            System.out.println("|Die Unterlagen dürfen aber nicht                                               |");
+                            System.out.println("|weiterverkauft werden, weder in elektronischer, noch in gedruckter Form.       |");
+                            System.out.println("|Ich will ausschliessen, dass ein anderer sich als Urheber dieser               |");
+                            System.out.println("|Lernmittel ausgibt und ich in diesem Falle für die Benutzung meiner eigenen    |");
+                            System.out.println("|Ausarbeitungen dann auch noch zahlen muss.                                     |");
+                            System.out.println("|Die Unterlagen dürfen ausser von mir nicht dem Internet                        |");
+                            System.out.println("|zugänglich gemacht werden,                                                     |");
+                            System.out.println("|auch nicht teilweise. Damit soll verhindert werden,                            |");
+                            System.out.println("|dass an verschiedenen Orten verschiedene Versionen auftauchen.                 |");
+                            System.out.println("|Eine Bitte:                                                                    |");
+                            System.out.println("|Falls sich Fehler in den Lernmitteln befinden, bitte ich,                      |");
+                            System.out.println("|mich darauf hinzuweisen.                                                       |");
+                            System.out.println("|Für Verbesserungsvorschläge, neue Ideen, usw. bin ich dankbar.                 |");
+                            System.out.println("|Meine Email-Adresse:                                                           |");
+                            System.out.println("|carlox@web.de                                                                  |");
+                            System.out.println("|IMPRESSUM                                                                      |");
+                            System.out.println("|Die hier zur Verfügung gestellten Materialien wurden mit MS-Office erstellt.   |");
+                            System.out.println("|Meine Lernmaterialien                                                          |");
+                            System.out.println("|                                                                               |");
+                            System.out.println("|                                                                               |");
+                            System.out.println("|NEU !!!! Linkliste zu anderen Unterrichtsmaterial produzierenden               |");
+                            System.out.println("|                                                                               |");
+                            System.out.println("|                                                                               |");
+                            System.out.println("|Letzte Änderung dieser Website:  26.3.2016                                     |");
+                            System.out.println("|                                                                               |");
+                            System.out.println("|Zähler:                                                                        |");
+                            System.out.println("|Gerade Online: 1                                                               |");
+                            System.out.println("|Besucher Heute: 10                                                             |");
+                            System.out.println("|Vortag: 28                                                                     |");
+                            System.out.println("|Tagesrekord: 498                                                               |");
+                            System.out.println("|Gesamt Besucher: 49116                                                         |");
+                            System.out.println("________________________________________________________________________________");
+                            break;
+                        case 1:
+                            System.out.println("._______________________________________________________________________________.");
+                            System.out.println("|Fast, Faster, FireBarn                                                         |");
+                            System.out.println("|_______________________________________________________________________________|");
+                            System.out.println("| <- i|" + website + "                                                      |");
+                            System.out.println("|_______________________________________________________________________________|");
+                            System.out.println("||Projekt Effektiver Arbeiten                                                   |");
+                            System.out.println("|                                                                               |");
+                            System.out.println("|Alle EDV-Lehrer, die das gleiche Fach unterrichten, erarbeiten Unterrichts-    |");
+                            System.out.println("|material für das gleiche Sachgebiet. Das ist Ressourcenvergeudung !            |");
+                            System.out.println("|Sinnvoll wäre es, dieses Material detailliert, ausführlich und selbstsprechend |");
+                            System.out.println("|für interessierte, lernwillige Autodidakten zugänglich zu machen               |");
+                            System.out.println("|Das hat folgende Vorteile:                                                     |");
+                            System.out.println("|1) Daran Interessierte können sich damit auseinandersetzen (Verbesserungs-     |");
+                            System.out.println("|vorschläge machen, auf Fehler hinweisen, neue Ideen bringen, usw.)             |");
+                            System.out.println("|und damit helfen, das bereitgestellte Unterrichtsmaterial zu verbessern.       |");
+                            System.out.println("|2) Die Einarbeitsungs- und Vorbereitungszeit eines EDV-Unterrichtenden         |");
+                            System.out.println("|in ein neues Fachgebiet wird durch die Nutzung dieses bereitgestellten         |");
+                            System.out.println("|Lernmaterials erheblich kürzer (das Rad muß nicht jedesmal neu erfunden werden.|");
+                            System.out.println("|Diese Person könnte deshalb dann in der eingesparten Zeit                      |");
+                            System.out.println("|selbst Unterrichtsmaterial aufarbeiten und zur Verfügung stellen...            |");
+                            System.out.println("|Unterstützung des Projekts                                                     |");
+                            System.out.println("|                                                                               |");
+                            System.out.println("|Da ich nur begrenzte Zeit und Fähigkeiten habe, suche ich                      |");
+                            System.out.println("|noch Projektunterstützer.                                                      |");
+                            System.out.println("|Jeder, der dieses Projekt unterstützen will, kann dies tun. Voraussetzung ist: |");
+                            System.out.println("|1) Das von ihm zur Verfügung gestellte Unterrichts- bzw. Lernmaterialien muß   |");
+                            System.out.println("|detailliert und ausführlichst ausgearbeitet werden.                            |");
+                            System.out.println("|2) Der Projektunterstützer muß diese Materialien auf seiner                    |");
+                            System.out.println("|Homepage zum Download                                                          |");
+                            System.out.println("|anbieten, Links auf alle anderen                                               |");
+                            System.out.println("|Projektunterstützer setzen und mich durch eine Email benachrichtigen.          |");
+                            System.out.println("|3) Wer seine Unterrichtsmaterialien anbieten will und mit 1) und 2) nicht      |");
+                            System.out.println("|einverstanden ist, kann sich trotzdem                                          |");
+                            System.out.println("________________________________________________________________________________");
+                            break;
+                        default:
+                            System.out.println("Fatal Overbarn. Exiting.");
+                            exit = true;
+                            //Sau guter Programmierstil:
+                            break;
+
+                    }
+
+                    while (scrollen.isEmpty() && !exit) {
+                        if (laufen == 1) {
+                            System.out.println("zum Scrollen 'runder rutschen' ein tippen.");
+                        } else {
+                            System.out.println("zum Scrollen 'rauf rutschen' ein tippen.");
+                        }
+                        System.out.println("Für verlassen 'exit'");
+                        System.out.print("Eingabe: ");
+                        scrollen = input.nextLine();
+                    }
+
+
+                    if (scrollen.equals("runder rutschen")) {
+                        laufen = 0;
+                    }
+
+                    if (scrollen.equals("rauf rutschen")) {
+                        laufen = 1;
+                    }
+
+                    if (scrollen.equals("exit")) {
+                        laufen = 1337;
+                    }
+                    scrollen = "";
+                }
+            }
+
+
+            if (inpString.contains("echo")) {
+                String output = "";
+                if (!inpString.equals("echo") && inpString.substring(0, 4).equals("echo")) {
+                    switch (inpString.substring(5, inpString.length())) {
+                        case "$RANDOM":
+                            output = "" + $RANDOM;
+>>>>>>> Stashed changes
                             break;
                         } 
                         
@@ -1066,6 +1213,7 @@ public class Main {
             }
         }
 
+<<<<<<< Updated upstream
         if (inpString.contains("echo")) {
             String output = "";
             if (!inpString.equals("echo") && inpString.substring(0, 4).equals("echo")) {
@@ -1089,6 +1237,19 @@ public class Main {
                     if (!pathname.substring(0, 1).equals("/")) {
                         if (directory.equals("/")) {
                             directory += pathname;
+=======
+            //Start Pseudo Filesystem
+            if (inpString.contains("cd")) {
+                try {
+                    if (inpString.substring(0, 3).equals("cd ")) {
+                        String pathname = inpString.substring(3, inpString.length());
+                        if (!pathname.substring(0, 1).equals("/")) {
+                            if (directory.equals("/")) {
+                                directory += pathname;
+                            } else {
+                                directory += "/" + pathname;
+                            }
+>>>>>>> Stashed changes
                         } else {
                             directory += "/" + pathname;
                         }
@@ -1107,6 +1268,7 @@ public class Main {
             }
         }
 
+<<<<<<< Updated upstream
         if (inpString.equals("ls")) {
             String list = "";
             if (directory.equals("/")) {
@@ -1131,6 +1293,12 @@ public class Main {
                 //Zufalls Spruch leere eingabe Drunkmode
                 if (zufall == 1) {
                     System.out.println("Was soll deeees?");
+=======
+            if (inpString.equals("ls")) {
+                String list = "";
+                if (directory.equals("/")) {
+                    list += "boot   home   barnian";
+>>>>>>> Stashed changes
                 }
                 if (zufall == 2) {
                     System.out.println("Ohne Ausgabe nur ein Briefbeschwähereeeeeer");
@@ -1138,6 +1306,7 @@ public class Main {
                 if (zufall == 3) {
                     System.out.println("ruhe sonst v3");
                 }
+<<<<<<< Updated upstream
                 if (zufall == 4) {
                     System.out.println("Da hat wohl jemand in der Apotheke Gefrühstückt");
                 }
@@ -1147,6 +1316,43 @@ public class Main {
             } else {
                 if (emptycounter > 2) {
                     System.out.println("Gleich gibt's V3");
+=======
+                System.out.println(list);
+                iscomando = true;
+            }
+
+            //End Pseudo Filesystem
+            //Empty Inputstring
+            if (inpString.isEmpty() || !iscomando) {
+                if (drunkmode) {
+                    int zufall = 10;
+                    zufall = (int) (Math.random() * 5);
+                    //Zufalls Spruch leere eingabe Drunkmode
+                    if (zufall == 1) {
+                        System.out.println("Was soll deeees?");
+                    }
+                    if (zufall == 2) {
+                        System.out.println("Ohne Ausgabe nur ein Briefbeschwähereeeeeer");
+                    }
+                    if (zufall == 3) {
+                        System.out.println("ruhe sonst v3");
+                    }
+                    if (zufall == 4) {
+                        System.out.println("Da hat wohl jemand in der Apotheke Gefrühstückt");
+                    }
+                    if (zufall == 0) {
+                        System.out.println("Was machen sie da dddeeeessss sieht nicht nach Java aus");
+                    }
+                } else {
+                    if (emptycounter > 2) {
+                        System.out.println("Gleich gibt's V3");
+                    }
+                    if (emptycounter > 6) {
+                        System.out.println("Nach V3 kommt der K2 Berg");
+                        emptycounter = 0;
+                    }
+                    emptycounter++;
+>>>>>>> Stashed changes
                 }
                 if (emptycounter > 6) {
                     System.out.println("Nach V3 kommt der K2 Berg");
@@ -1157,5 +1363,9 @@ public class Main {
             iscomando = false;
         }
     }
+<<<<<<< Updated upstream
 
 }
+=======
+}
+>>>>>>> Stashed changes
