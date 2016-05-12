@@ -32,7 +32,6 @@ package com.enfs;
  * - Firebarn
  * TODO: Befehlsliste aktualisieren
  */
-
 import java.awt.Point;
 import java.util.Scanner;
 
@@ -1045,11 +1044,29 @@ public class Main {
                             System.out.println("________________________________________________________________________________");
                             break;
                         default:
+                            System.out.println("._______________________________________________________________________________.");
+                            System.out.println("|Fast, Faster, FireBarn                                                         |");
+                            System.out.println("|_______________________________________________________________________________|");
+                            System.out.println("| <- i|" + website + "                                                      |");
+                            System.out.println("|_______________________________________________________________________________|");
+                            System.out.println("|Schulkonsole  Schulkonsole für Schüler                                         |");
+                            System.out.println("|Version 2.8 (01.02.2013) für Windows Server [www.support-netz.de] mein Konto   |");
+                            System.out.println("|Zugriff verweigert                                                             |");
+                            System.out.println("|Grund: Der Internetzugang für Ihren Rechner                                    |");
+                            System.out.println("|ist im Moment gesperrt.                                                        |");
+                            System.out.println("|Ein Freischalten kann nur durch den Lehrer stattfinden.                        |");
+                            System.out.println("|                                                                               |");
+                            System.out.println("|Wechseln zur Seite: ~/Konto_Internetrechte.aspxZentrale Expertengruppe Netze,  |");
+                            System.out.println("|LMZ Baden-Württemberg Der Zugriff auf diese Seite                              |");
+                            System.out.println("|wird Ihnen verweigert.                                                         |");
+                            System.out.println("________________________________________________________________________________");
+                        break;
+                            /*default:
                             System.out.println("Fatal Overbarn. Exiting.");
                             exit = true;
                             //Sau guter Programmierstil:
                             break;
-
+                        */
                     }
 
                     while (scrollen.isEmpty() && !exit) {
@@ -1062,7 +1079,6 @@ public class Main {
                         System.out.print("Eingabe: ");
                         scrollen = input.nextLine();
                     }
-
 
                     if (scrollen.equals("runder rutschen")) {
                         laufen = 0;
@@ -1078,7 +1094,6 @@ public class Main {
                     scrollen = "";
                 }
             }
-
 
             if (inpString.contains("echo")) {
                 String output = "";
